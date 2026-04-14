@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+/* app-level defaults */
+:root {
+  color-scheme: light;
+}
+

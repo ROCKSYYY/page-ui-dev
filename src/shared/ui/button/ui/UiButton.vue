@@ -1,0 +1,41 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+
+type Variant = 'primary' | 'secondary' | 'ghost'
+
+const props = withDefaults(
+  defineProps<{
+    variant?: Variant
+    disabled?: boolean
+    type?: 'button' | 'submit' | 'reset'
+  }>(),
+  {
+    variant: 'primary',
+    disabled: false,
+    type: 'button',
+  },
+)
+
+const classes = computed(() => {
+  const base =
+    'inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition ' +
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400/60 focus-visible:ring-offset-2 ' +
+    'disabled:pointer-events-none disabled:opacity-50'
+
+  switch (props.variant) {
+    case 'secondary':
+      return `${base} bg-slate-100 text-slate-900 hover:bg-slate-200`
+    case 'ghost':
+      return `${base} bg-transparent text-slate-900 hover:bg-slate-100`
+    default:
+      return `${base} bg-slate-900 text-white hover:bg-slate-800`
+  }
+})
+</script>
+
+<template>
+  <button :type="type" :disabled="disabled" :class="classes">
+    <slot />
+  </button>
+</template>
+

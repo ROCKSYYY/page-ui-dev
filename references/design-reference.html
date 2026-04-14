@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Reference</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        margin: 0;
+        padding: 24px;
+        color: #0f172a;
+        background: #ffffff;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .btn {
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid #e2e8f0;
+        background: #0f172a;
+        color: white;
+      }
+      .btn.secondary {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: #0f172a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 24px; margin: 0 0 8px; font-weight: 600">Reference</h1>
+    <p style="margin: 0 0 24px; color: #64748b; font-size: 14px">
+      Minimal visual baseline for spacing and button variants.
+    </p>
+    <div class="row">
+      <button class="btn">Primary</button>
+      <button class="btn secondary">Secondary</button>
+      <button class="btn ghost">Ghost</button>
+      <button class="btn" disabled style="opacity: 0.5">Disabled</button>
+    </div>
+  </body>
+</html>
+
