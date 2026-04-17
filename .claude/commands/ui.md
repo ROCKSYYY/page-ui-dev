@@ -1,9 +1,14 @@
 # /ui
 ## Vibecoding Design System — Strict Rules
 
-### 🎨 Colors (from references/design-tokens.json)
-- Accent: `red (#FF2159)`, `yellow (#F0FF40)` → use `var(--color-accent-red)` / `var(--color-accent-yellow)`
-- Monochrome: `black (#222222) → white (#FFFFFF)` → use `var(--color-monochrome-*)`
+### 🎨 Colors & Backgrounds (from references/design-tokens.json)
+- **Accent:** `red (#FF2159)`, `yellow (#F0FF40)` → use `var(--color-accent-red)` / `var(--color-accent-yellow)`
+- **Monochrome:** `black (#222222) → white (#FFFFFF)` → use `var(--color-monochrome-*)`
+- **🚫 STRICT BACKGROUND RULE:** 
+  - Page, section, wrapper, and card backgrounds MUST be `white` (`#FFFFFF` or `bg-white`).
+  - NEVER use dark monochrome tones (`#222222`, `#424242`, `#787878`, etc.) for any background layer.
+  - Dark colors are ONLY allowed for: text, icons, borders, hover/active states, or explicit overlays/modals.
+  - If visual separation is needed, use `extra-light-gray` (`#F4F4F4`), NEVER dark/gray backgrounds.
 - NEVER hardcode hex values. NEVER use opacity directly in CSS; use token variants.
 
 ### 📏 Spacing (8px Grid)
@@ -18,14 +23,16 @@
 
 ### 🧩 Component Specs
 - **Button:** 40px height, 8px radius, 600 weight, hover: opacity 0.85 + translateY(-1px)
-- **Card:** 24px padding, 12px radius, shadow-md, bg white
-- **Input:** 40px height, 8px radius, border light-gray, focus: ring primary/20
+- **Card:** 24px padding, 12px radius, shadow-md, **bg: white** (strictly no dark/gray fills)
+- **Input:** 40px height, 8px radius, border light-gray, focus: ring primary/20, **bg: white**
+- **Section/Wrapper:** Always `bg-white` or `bg-extra-light-gray`. Padding follows 8px grid.
 
 ### ✅ Validation Checklist
 Before marking UI task complete:
 1. ☐ NO hardcoded colors/spacing
-2. ☐ Responsive breakpoints implemented
-3. ☐ Hover/focus/disabled states defined
-4. ☐ Semantic HTML structure matches reference
-5. ☐ WCAG 2.1 AA contrast & keyboard navigation
+2. ☐ NO dark backgrounds on pages/sections/cards (white/light-only rule enforced)
+3. ☐ Responsive breakpoints implemented
+4. ☐ Hover/focus/disabled states defined
+5. ☐ Semantic HTML structure matches reference
+6. ☐ WCAG 2.1 AA contrast & keyboard navigation
 Run `/check-design` to validate before commit.

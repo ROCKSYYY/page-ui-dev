@@ -34,7 +34,7 @@ const cards = [
           </div>
         </div>
 
-        <UiButton href="#contact" variant="yellow" size="sm">Получить оценку →</UiButton>
+        <UiButton href="#contact" variant="red" size="sm">Получить оценку →</UiButton>
       </div>
     </div>
   </section>
@@ -43,8 +43,9 @@ const cards = [
 <style scoped>
 .price-strip {
   padding: clamp(32px, 4vw, 48px) 0;
-  background: var(--color-mono-black);
-  border-bottom: 1px solid var(--white-a06);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .container {
@@ -68,7 +69,7 @@ const cards = [
 
 .price-strip__label {
   display: block;
-  color: var(--white-a30);
+  color: var(--text-muted);
   margin-bottom: var(--spacing-sm);
   letter-spacing: 0.08em;
   font-size: 11px;
@@ -79,7 +80,7 @@ const cards = [
 .price-strip__value {
   font-size: clamp(22px, 2.2vw, 32px);
   font-weight: 300;
-  color: var(--white-a70);
+  color: var(--text-primary);
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: var(--spacing-sm);
@@ -87,13 +88,13 @@ const cards = [
 
 .price-strip__value strong {
   font-weight: 500;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .price-strip__note {
   font-size: 12px;
   font-weight: 300;
-  color: var(--white-a25);
+  color: var(--text-secondary);
   line-height: 1.5;
   max-width: 260px;
 }
@@ -114,26 +115,26 @@ const cards = [
 .price-card {
   flex: 1;
   padding: var(--spacing-md) 20px;
-  border: 1px solid var(--white-a08);
-  background: var(--white-a03);
+  border: 1px solid var(--border);
+  background: var(--color-mono-white);
   transition: background var(--t2), border-color var(--t2);
   cursor: default;
   min-width: 0;
 }
 
 .price-card:hover {
-  background: var(--white-a06);
-  border-color: var(--white-a14);
+  background: var(--surface);
+  border-color: var(--black-a14);
 }
 
 .price-card--accent {
-  border-color: var(--yellow-a20);
-  background: var(--yellow-a04);
+  border-color: var(--color-accent-red);
+  background: var(--color-accent-red-dim);
 }
 
 .price-card--accent:hover {
-  background: var(--yellow-a07);
-  border-color: var(--yellow-a35);
+  background: var(--color-accent-red-dim);
+  border-color: var(--color-accent-red);
 }
 
 .price-card__type {
@@ -141,29 +142,29 @@ const cards = [
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--white-a30);
+  color: var(--text-muted);
   margin-bottom: var(--spacing-sm);
 }
 
 .price-card--accent .price-card__type {
-  color: var(--yellow-a60);
+  color: var(--color-accent-red);
 }
 
 .price-card__range {
   font-size: clamp(14px, 1.2vw, 18px);
   font-weight: 500;
   letter-spacing: -0.025em;
-  color: var(--color-mono-white);
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .price-card--accent .price-card__range {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .price-card__time {
   font-size: 12px;
   font-weight: 300;
-  color: var(--white-a30);
+  color: var(--text-secondary);
 }
 </style>

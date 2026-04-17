@@ -45,7 +45,7 @@ function handleSubmit() {
       </p>
       <UiButton
         type="submit"
-        variant="yellow"
+        variant="red"
         :class="{ 'form__btn--sent': submitted }"
       >
         <template v-if="submitted">Отправлено ✓</template>
@@ -107,15 +107,15 @@ function handleSubmit() {
   font-weight: 400;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--white-a28);
+  color: var(--text-muted);
 }
 
 .form__inp,
 .form__ta {
   width: 100%;
-  background: var(--white-a05);
-  border: 1px solid var(--white-a09);
-  color: var(--color-mono-white);
+  background: var(--color-mono-white);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
   font-family: var(--font);
   font-size: 14px;
   font-weight: 300;
@@ -129,13 +129,19 @@ function handleSubmit() {
 
 .form__inp::placeholder,
 .form__ta::placeholder {
-  color: var(--white-a18);
+  color: var(--text-muted);
 }
 
 .form__inp:focus,
 .form__ta:focus {
-  border-color: var(--yellow-a35);
-  background: var(--white-a07);
+  border-color: var(--color-accent-red);
+  background: var(--color-mono-white);
+}
+
+.form__inp:focus-visible,
+.form__ta:focus-visible {
+  outline: 2px solid var(--color-accent-red);
+  outline-offset: 0;
 }
 
 .form__ta {
@@ -154,13 +160,13 @@ function handleSubmit() {
 .form__policy {
   font-size: 11px;
   font-weight: 300;
-  color: var(--white-a20);
+  color: var(--text-muted);
   line-height: 1.5;
   max-width: 240px;
 }
 
 .form__policy a {
-  color: var(--white-a35);
+  color: var(--text-secondary);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color var(--t1);
@@ -168,12 +174,12 @@ function handleSubmit() {
 
 .form__policy a:hover,
 .form__policy a:focus-visible {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .form__btn--sent {
-  background: var(--color-accent-red) !important;
-  color: var(--color-mono-white) !important;
+  background: var(--color-accent-yellow) !important;
+  color: var(--color-mono-black) !important;
   pointer-events: none;
 }
 
@@ -183,14 +189,14 @@ function handleSubmit() {
   align-items: center;
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid var(--white-a06);
+  border-top: 1px solid var(--border);
   flex-wrap: wrap;
 }
 
 .form__alt-lbl {
   font-size: 11px;
   font-weight: 300;
-  color: var(--white-a20);
+  color: var(--text-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -198,7 +204,7 @@ function handleSubmit() {
 .form__contact {
   font-size: 13px;
   font-weight: 300;
-  color: var(--white-a40);
+  color: var(--text-secondary);
   letter-spacing: -0.01em;
   display: flex;
   align-items: center;
@@ -209,8 +215,8 @@ function handleSubmit() {
 
 .form__contact:hover,
 .form__contact:focus-visible {
-  color: var(--color-accent-yellow);
-  outline: 2px solid var(--color-accent-yellow);
+  color: var(--color-accent-red);
+  outline: 2px solid var(--color-accent-red);
   outline-offset: 3px;
   border-radius: 2px;
 }

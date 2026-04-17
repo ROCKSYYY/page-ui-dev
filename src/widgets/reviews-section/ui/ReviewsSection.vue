@@ -30,7 +30,7 @@ const reviews = [
   <section class="reviews">
     <div class="container">
       <div class="reviews__hdr r">
-        <SectionLabel label="Что говорят клиенты" :light="true" />
+        <SectionLabel label="Что говорят клиенты" />
         <h2 class="reviews__heading">Отзывы</h2>
       </div>
 
@@ -60,7 +60,7 @@ const reviews = [
 <style scoped>
 .reviews {
   padding: var(--section-py) 0;
-  background: var(--color-mono-black);
+  background: var(--surface);
 }
 
 .container {
@@ -79,7 +79,7 @@ const reviews = [
   font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.025em;
-  color: var(--color-mono-white);
+  color: var(--text-primary);
 }
 
 .reviews__grid {
@@ -102,8 +102,8 @@ const reviews = [
 
 .review-card {
   padding: clamp(28px, 3vw, 40px);
-  border: 1px solid var(--white-a08);
-  background: var(--white-a03);
+  border: 1px solid var(--border);
+  background: var(--color-mono-white);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -112,20 +112,20 @@ const reviews = [
 }
 
 .review-card:hover {
-  background: var(--white-a05);
-  border-color: var(--white-a14);
+  background: var(--surface);
+  border-color: var(--black-a14);
 }
 
 .review-card__stars {
   font-size: 16px;
   letter-spacing: 2px;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .review-card__text {
   font-size: clamp(13px, 0.95vw, 15px);
   font-weight: 300;
-  color: var(--white-a60);
+  color: var(--text-secondary);
   line-height: 1.7;
   letter-spacing: -0.01em;
   flex: 1;
@@ -137,28 +137,28 @@ const reviews = [
   align-items: flex-start;
   gap: 14px;
   padding-top: 18px;
-  border-top: 1px solid var(--white-a07);
+  border-top: 1px solid var(--border);
 }
 
 .review-card__avatar {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--yellow-a10);
-  border: 1px solid var(--yellow-a20);
+  background: var(--color-accent-red-dim);
+  border: 1px solid var(--color-accent-red);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
   flex-shrink: 0;
 }
 
 .review-card__name {
   font-size: 14px;
   font-weight: 500;
-  color: var(--white-a80);
+  color: var(--text-primary);
   letter-spacing: -0.01em;
   margin-bottom: 2px;
 }
@@ -166,7 +166,7 @@ const reviews = [
 .review-card__role {
   font-size: 12px;
   font-weight: 300;
-  color: var(--white-a35);
+  color: var(--text-muted);
   letter-spacing: -0.01em;
   line-height: 1.4;
 }
@@ -174,7 +174,7 @@ const reviews = [
 .review-card__company {
   font-size: 12px;
   font-weight: 400;
-  color: var(--yellow-a70);
+  color: var(--color-accent-red);
   letter-spacing: -0.01em;
   margin-top: 3px;
 }

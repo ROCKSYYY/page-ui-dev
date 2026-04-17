@@ -42,7 +42,7 @@ const reasons = [
             Работаем с промышленными компаниями 14 лет. За это время выработали подход,
             который минимизирует риски и обеспечивает результат.
           </p>
-          <UiButton href="#contact" variant="yellow">Обсудить проект</UiButton>
+          <UiButton href="#contact" variant="red">Обсудить проект</UiButton>
         </div>
 
         <div class="why__list r d1">

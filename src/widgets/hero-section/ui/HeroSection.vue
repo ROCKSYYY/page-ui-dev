@@ -44,13 +44,13 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
         </p>
 
         <div class="hero__actions r d3">
-          <UiButton href="#contact" variant="yellow">
+          <UiButton href="#contact" variant="red">
             Обсудить задачу
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
               <path d="M2.5 7.5h10M9 4l3.5 3.5L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </UiButton>
-          <UiButton href="#cases" variant="ghost-light">Смотреть кейсы</UiButton>
+          <UiButton href="#cases" variant="ghost-dark">Смотреть кейсы</UiButton>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
 <style scoped>
 .hero {
   min-height: 100svh;
-  background: var(--color-mono-black);
+  background: var(--color-mono-white);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -86,8 +86,8 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(var(--white-a02) 1px, transparent 1px),
-    linear-gradient(90deg, var(--white-a02) 1px, transparent 1px);
+    linear-gradient(var(--black-a04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--black-a04) 1px, transparent 1px);
   background-size: var(--grid-bg-size) var(--grid-bg-size);
 }
 
@@ -111,7 +111,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   height: 40vw;
   max-width: 500px;
   max-height: 500px;
-  background: radial-gradient(circle, var(--yellow-a07) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--yellow-a12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -132,9 +132,9 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background: var(--yellow-a08);
+  background: var(--color-accent-red-dim);
   border: 1px solid var(--color-accent-yellow-border);
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
   padding: 5px 14px;
   border-radius: 100px;
   font-size: 12px;
@@ -147,7 +147,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
 .hero__tag-pulse {
   width: 6px;
   height: 6px;
-  background: var(--color-accent-yellow);
+  background: var(--color-accent-red);
   border-radius: 50%;
   animation: pulse 2.2s ease infinite;
 }
@@ -157,7 +157,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   font-weight: 500;
   line-height: 1.0;
   letter-spacing: -0.04em;
-  color: var(--color-mono-white);
+  color: var(--color-mono-black);
   max-width: 960px;
   margin-bottom: 28px;
 }
@@ -167,7 +167,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
 }
 
 .hero__heading-muted {
-  color: var(--white-a50);
+  color: var(--text-muted);
 }
 
 .hero__heading-row {
@@ -196,7 +196,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   display: flex;
   align-items: center;
   white-space: nowrap;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
   height: var(--slot-h);
 }
 
@@ -205,7 +205,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: -0.02em;
-  color: var(--white-a45);
+  color: var(--text-secondary);
   max-width: 520px;
   margin-bottom: 44px;
 }
@@ -220,7 +220,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
 .hero__clients {
   position: relative;
   z-index: 2;
-  border-top: 1px solid var(--white-a07);
+  border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
 }
@@ -230,7 +230,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--white-a25);
+  color: var(--text-muted);
   white-space: nowrap;
   padding: 20px var(--px);
   flex-shrink: 0;
@@ -241,7 +241,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   align-items: center;
   gap: clamp(20px, 3.5vw, 48px);
   padding: 20px var(--px);
-  border-left: 1px solid var(--white-a07);
+  border-left: 1px solid var(--border);
   flex-wrap: wrap;
 }
 
@@ -249,14 +249,14 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   font-size: clamp(12px, 1vw, 14px);
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: var(--white-a35);
+  color: var(--text-muted);
   text-transform: uppercase;
   transition: color var(--t2);
   cursor: default;
 }
 
 .client-name:hover {
-  color: var(--white-a75);
+  color: var(--text-primary);
 }
 
 .hero__scroll {
@@ -266,7 +266,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--white-a25);
+  color: var(--text-muted);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -276,7 +276,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
 .hero__scroll-track {
   width: 36px;
   height: 1.5px;
-  background: var(--white-a10);
+  background: var(--border);
   position: relative;
   overflow: hidden;
 }
@@ -288,7 +288,7 @@ const clients = ['УГМК', 'Северсталь', 'Газпром', 'Сбер
   left: -100%;
   width: 100%;
   height: 100%;
-  background: var(--color-accent-yellow);
+  background: var(--color-accent-red);
   animation: track 2.4s ease infinite;
 }
 </style>

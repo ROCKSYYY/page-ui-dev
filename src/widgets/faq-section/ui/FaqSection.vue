@@ -45,7 +45,7 @@ const faqs = [
           <SectionLabel label="Частые вопросы" />
           <h2 class="faq__heading">FAQ</h2>
           <p class="faq__sub">Ответы на вопросы, которые задают до начала работы. Не нашли своего — напишите нам.</p>
-          <UiButton href="#contact" variant="ghost-dark" size="sm">Задать вопрос</UiButton>
+          <UiButton href="#contact" variant="red" size="sm">Задать вопрос</UiButton>
         </div>
 
         <div class="faq__list r d1">

@@ -46,7 +46,7 @@ const cases = [
           <SectionLabel label="Портфолио" />
           <h2 class="cases__heading">Кейсы</h2>
         </div>
-        <UiButton href="/projects" variant="ghost-dark" size="sm">Все проекты →</UiButton>
+        <UiButton href="/projects" variant="red" size="sm">Все проекты →</UiButton>
       </div>
 
       <div class="cases__grid">
@@ -130,12 +130,13 @@ const cases = [
 }
 
 .case--dark {
-  background: var(--color-mono-black);
-  border-color: var(--color-mono-black);
+  background: var(--surface);
+  border-color: var(--color-accent-red);
 }
 
 .case--dark:hover {
-  border-color: var(--dark-surface-2);
+  border-color: var(--color-accent-red);
+  transform: translateY(-4px);
 }
 
 .case__ind {
@@ -147,7 +148,7 @@ const cases = [
 }
 
 .case--dark .case__ind {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .case__title {
@@ -155,12 +156,12 @@ const cases = [
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1.2;
-  color: var(--color-mono-black);
+  color: var(--text-primary);
   flex: 1;
 }
 
 .case--dark .case__title {
-  color: var(--color-mono-white);
+  color: var(--text-primary);
 }
 
 .case__metric {
@@ -170,11 +171,11 @@ const cases = [
   padding: 9px 18px;
   border-radius: 100px;
   align-self: flex-start;
-  background: var(--black-a04);
+  background: var(--color-accent-red-dim);
 }
 
 .case--dark .case__metric {
-  background: var(--yellow-a07);
+  background: var(--color-accent-red-dim);
 }
 
 .case__metric-n {
@@ -185,7 +186,7 @@ const cases = [
 }
 
 .case--dark .case__metric-n {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .case__metric-t {
@@ -195,7 +196,7 @@ const cases = [
 }
 
 .case--dark .case__metric-t {
-  color: var(--white-a40);
+  color: var(--text-secondary);
 }
 
 .case__foot {
@@ -209,7 +210,7 @@ const cases = [
 }
 
 .case--dark .case__foot {
-  border-color: var(--white-a07);
+  border-color: var(--border);
 }
 
 .case__task {
@@ -221,7 +222,7 @@ const cases = [
 }
 
 .case--dark .case__task {
-  color: var(--white-a28);
+  color: var(--text-muted);
 }
 
 .case__btn {
@@ -245,13 +246,13 @@ const cases = [
 }
 
 .case--dark .case__btn {
-  border-color: var(--white-a12);
-  color: var(--white-a30);
+  border-color: var(--color-accent-red);
+  color: var(--color-accent-red);
 }
 
 .case--dark:hover .case__btn {
-  background: var(--color-accent-yellow);
-  border-color: var(--color-accent-yellow);
-  color: var(--color-mono-black);
+  background: var(--color-accent-red);
+  border-color: var(--color-accent-red);
+  color: var(--color-mono-white);
 }
 </style>

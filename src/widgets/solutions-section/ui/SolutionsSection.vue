@@ -150,13 +150,14 @@ const solutions = [
 }
 
 .sol-card--dark {
-  background: var(--color-mono-black);
-  border-color: var(--color-mono-black);
+  background: var(--surface);
+  border-color: var(--color-accent-red);
 }
 
 .sol-card--dark:hover {
-  background: var(--dark-surface);
-  border-color: var(--dark-surface-2);
+  background: var(--surface);
+  border-color: var(--color-accent-red);
+  transform: translateY(-3px);
 }
 
 .sol-card__ico {
@@ -172,7 +173,7 @@ const solutions = [
 }
 
 .sol-card--dark .sol-card__ico {
-  background: var(--white-a07);
+  background: var(--color-accent-red-dim);
 }
 
 .sol-card__title {
@@ -184,7 +185,7 @@ const solutions = [
 }
 
 .sol-card--dark .sol-card__title {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .sol-card__desc {
@@ -196,7 +197,7 @@ const solutions = [
 }
 
 .sol-card--dark .sol-card__desc {
-  color: var(--white-a35);
+  color: var(--text-muted);
 }
 
 .sol-card__arr {
@@ -220,12 +221,12 @@ const solutions = [
 }
 
 .sol-card--dark .sol-card__arr {
-  background: var(--white-a07);
-  color: var(--color-accent-yellow);
+  background: var(--color-accent-red-dim);
+  color: var(--color-accent-red);
 }
 
 .sol-card--dark:hover .sol-card__arr {
-  background: var(--color-accent-yellow);
-  color: var(--color-mono-black);
+  background: var(--color-accent-red);
+  color: var(--color-mono-white);
 }
 </style>

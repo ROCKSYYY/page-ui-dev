@@ -26,10 +26,13 @@ const navLinks = [
     <div class="container">
       <div class="nav__inner">
         <a href="/" class="nav__logo">
-          <div class="nav__logo-mark">
-            <span>А</span>
-          </div>
-          <span class="nav__logo-text">Атвинта</span>
+          <img
+            class="nav__logo-img"
+            src="https://atwinta.ru/_ipx/_/Logos/LogoDark.svg"
+            alt="Атвинта"
+            loading="eager"
+            decoding="async"
+          />
         </a>
 
         <ul class="nav__links">
@@ -80,31 +83,15 @@ const navLinks = [
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-shrink: 0;
 }
 
-.nav__logo-mark {
-  width: 30px;
-  height: 30px;
-  background: var(--color-mono-black);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav__logo-mark span {
-  color: var(--color-accent-yellow);
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.nav__logo-text {
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  color: var(--color-mono-black);
+.nav__logo-img {
+  display: block;
+  height: var(--spacing-xl);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .nav__links {

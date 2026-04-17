@@ -24,9 +24,9 @@ const links = [
 
 <style scoped>
 .footer {
-  background: var(--footer-bg);
+  background: var(--surface);
   padding: clamp(28px, 4vw, 44px) 0;
-  border-top: 1px solid var(--white-a05);
+  border-top: 1px solid var(--border);
 }
 
 .container {
@@ -47,7 +47,7 @@ const links = [
 .footer__copy {
   font-size: 12px;
   font-weight: 300;
-  color: var(--white-a22);
+  color: var(--text-muted);
 }
 
 .footer__links {
@@ -59,16 +59,16 @@ const links = [
 .footer__links a {
   font-size: 12px;
   font-weight: 300;
-  color: var(--white-a28);
+  color: var(--text-secondary);
   transition: color var(--t1);
 }
 
 .footer__links a:hover {
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .footer__links a:focus-visible {
-  outline: 2px solid var(--color-accent-yellow);
+  outline: 2px solid var(--color-accent-red);
   outline-offset: 3px;
   border-radius: 2px;
 }

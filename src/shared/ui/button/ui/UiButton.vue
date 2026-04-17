@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    variant?: 'yellow' | 'pink' | 'ghost-light' | 'ghost-dark'
+    variant?: 'yellow' | 'pink' | 'ghost-light' | 'ghost-dark' | 'red'
     size?: 'md' | 'sm'
     href?: string
     type?: 'button' | 'submit'
@@ -35,8 +35,8 @@ const tag = computed(() => (props.href ? 'a' : 'button'))
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  border-radius: 8px;
-  height: 40px;
+  border-radius: 20px;
+  height: 50px;
   padding: 0 var(--spacing-xl);
   font-family: var(--font);
   font-size: 15px;
@@ -95,6 +95,18 @@ const tag = computed(() => (props.href ? 'a' : 'button'))
   background: var(--color-mono-black);
   color: var(--color-mono-white);
   border-color: var(--color-mono-black);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.ui-btn--red {
+  background: var(--color-accent-red);
+  color: var(--color-mono-white);
+}
+
+.ui-btn--red:hover {
+  background: var(--color-accent-yellow);
+  color: var(--color-mono-black);
   opacity: 1;
   transform: translateY(-1px);
 }

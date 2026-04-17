@@ -17,7 +17,7 @@ const contacts = [
     <div class="container">
       <div class="cta__inner">
         <div class="r">
-          <SectionLabel label="Начать работу" :light="true" />
+          <SectionLabel label="Начать работу" />
           <h2 class="cta__heading">
             Обсудите задачу —<br>расскажем, как решали<br><em>похожие проекты</em>
           </h2>
@@ -50,7 +50,7 @@ const contacts = [
 
           <div class="cta__proof">
             <p class="cta__quote">
-              Работы были выполнены с надлежащим качеством и в установленные сроки. Будем рады рекомендовать Атвинту как компетентную IT-компанию для выполнения масштабных проектов государственного уровня.
+              Работы были выполнены с надлежащим качеством и в установленные сроки. Будем рады рекомендовать Атвинту как компетентную IT-компанию для вып��лнения масштабных проектов государственного уровня.
             </p>
             <div class="cta__author">
               <div class="cta__avatar">Г</div>
@@ -73,7 +73,7 @@ const contacts = [
 <style scoped>
 .cta {
   padding: var(--section-py) 0;
-  background: var(--color-mono-black);
+  background: var(--surface);
   overflow: hidden;
   position: relative;
 }
@@ -83,8 +83,8 @@ const contacts = [
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(var(--white-a02) 1px, transparent 1px),
-    linear-gradient(90deg, var(--white-a02) 1px, transparent 1px);
+    linear-gradient(var(--black-a04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--black-a04) 1px, transparent 1px);
   background-size: var(--grid-bg-size) var(--grid-bg-size);
 }
 
@@ -95,7 +95,7 @@ const contacts = [
   transform: translate(-50%, -50%);
   width: 60vw;
   height: 40vh;
-  background: radial-gradient(ellipse, var(--red-a07) 0%, transparent 70%);
+  background: radial-gradient(ellipse, var(--red-a10) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -126,13 +126,13 @@ const contacts = [
   font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.025em;
-  color: var(--color-mono-white);
+  color: var(--text-primary);
   margin-bottom: 18px;
 }
 
 .cta__heading em {
   font-style: normal;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
 }
 
 .cta__sub {
@@ -140,7 +140,7 @@ const contacts = [
   font-weight: 300;
   line-height: 1.65;
   letter-spacing: -0.015em;
-  color: var(--white-a40);
+  color: var(--text-secondary);
   margin-bottom: 36px;
 }
 
@@ -157,7 +157,7 @@ const contacts = [
   gap: 10px;
   font-size: clamp(13px, 0.95vw, 15px);
   font-weight: 300;
-  color: var(--white-a50);
+  color: var(--text-secondary);
   letter-spacing: -0.01em;
   transition: color var(--t1);
   text-decoration: none;
@@ -165,15 +165,15 @@ const contacts = [
 
 .cta__contact-item:hover,
 .cta__contact-item:focus-visible {
-  color: var(--color-accent-yellow);
-  outline: 2px solid var(--color-accent-yellow);
+  color: var(--color-accent-red);
+  outline: 2px solid var(--color-accent-red);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 .cta__contact-item svg {
   flex-shrink: 0;
-  color: var(--white-a25);
+  color: var(--text-muted);
 }
 
 .cta__contact-item--addr {
@@ -181,19 +181,19 @@ const contacts = [
 }
 
 .cta__contact-item--addr:hover {
-  color: var(--white-a50);
+  color: var(--text-secondary);
 }
 
 .cta__proof {
   padding: 22px;
-  border: 1px solid var(--white-a08);
-  background: var(--white-a03);
+  border: 1px solid var(--border);
+  background: var(--color-mono-white);
 }
 
 .cta__quote {
   font-size: clamp(13px, 0.9vw, 14px);
   font-weight: 300;
-  color: var(--white-a50);
+  color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: var(--spacing-md);
   font-style: italic;
@@ -209,25 +209,26 @@ const contacts = [
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--white-a08);
+  background: var(--color-accent-red-dim);
+  border: 1px solid var(--color-accent-red);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 13px;
   font-weight: 500;
-  color: var(--color-accent-yellow);
+  color: var(--color-accent-red);
   flex-shrink: 0;
 }
 
 .cta__author-name {
   font-size: 13px;
   font-weight: 500;
-  color: var(--white-a65);
+  color: var(--text-primary);
 }
 
 .cta__author-role {
   font-size: 11px;
   font-weight: 300;
-  color: var(--white-a30);
+  color: var(--text-muted);
 }
 </style>

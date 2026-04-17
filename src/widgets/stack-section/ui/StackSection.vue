@@ -137,16 +137,16 @@ const russianStack = [
 }
 
 .stack__col--dark {
-  background: var(--color-mono-black);
-  border-color: var(--color-mono-black);
+  background: var(--surface);
+  border-color: var(--color-accent-red);
 }
 
 .stack__col--dark .stack__col-title {
-  color: var(--white-a30);
+  color: var(--text-muted);
 }
 
 .stack__col--dark .stack__col-title::before {
-  background: var(--color-accent-yellow);
+  background: var(--color-accent-red);
 }
 
 .stack__items {
@@ -173,13 +173,13 @@ const russianStack = [
 }
 
 .stack__col--dark .stack__item {
-  background: var(--white-a05);
-  border-color: var(--white-a08);
+  background: var(--color-mono-white);
+  border-color: var(--border);
 }
 
 .stack__col--dark .stack__item:hover {
-  border-color: var(--yellow-a40);
-  background: var(--yellow-a05);
+  border-color: var(--color-accent-red);
+  background: var(--color-mono-white);
 }
 
 .stack__item-ico {
@@ -195,7 +195,7 @@ const russianStack = [
 }
 
 .stack__col--dark .stack__item-ico {
-  background: var(--white-a08);
+  background: var(--surface-2);
 }
 
 .stack__item-name {
@@ -206,18 +206,18 @@ const russianStack = [
 }
 
 .stack__col--dark .stack__item-name {
-  color: var(--white-a75);
+  color: var(--text-primary);
 }
 
 .stack__note {
   margin-top: 24px;
   padding: var(--spacing-md) 20px;
-  background: var(--color-accent-yellow-dim);
-  border: 1px solid var(--color-accent-yellow-border);
+  background: var(--color-accent-red-dim);
+  border: 1px solid var(--color-accent-red);
   border-radius: 4px;
   font-size: 13px;
   font-weight: 300;
-  color: var(--yellow-a80);
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 </style>
