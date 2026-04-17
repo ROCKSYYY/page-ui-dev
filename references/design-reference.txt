@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Разработка веб-сервисов и платформ для бизнеса | Атвинта</title>
+<meta name="description" content="Разрабатываем корпоративные платформы и веб-сервисы для промышленных компаний. Аналитика процессов → проектирование → разработка → SLA. Клиенты: УГМК, Северсталь, Газпром. Обсудить задачу →">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- ─── STRUCTURED DATA ───────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Атвинта",
+  "alternateName": "Atwinta",
+  "url": "https://atwinta.ru",
+  "logo": "https://atwinta.ru/Logos/LogoLight.svg",
+  "description": "Digital-агентство полного цикла. Разработка корпоративных платформ, веб-сервисов и B2B-порталов для промышленности и крупного бизнеса.",
+  "foundingDate": "2011",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 100 },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Дмитровское шоссе 87, офис 403",
+      "addressLocality": "Москва",
+      "postalCode": "127238",
+      "addressCountry": "RU"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Бакинский переулок 15",
+      "addressLocality": "Кемерово",
+      "postalCode": "650002",
+      "addressCountry": "RU"
+    }
+  ],
+  "telephone": ["+7-499-350-13-90", "+7-3842-45-25-31"],
+  "email": "info@atwinta.ru",
+  "sameAs": [
+    "https://vc.ru/atwinta",
+    "https://t.me/atwinta"
+  ],
+  "knowsAbout": [
+    "Разработка веб-сервисов",
+    "Корпоративные платформы",
+    "B2B-порталы",
+    "Импортозамещение ПО",
+    "Цифровизация промышленности"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Разработка веб-сервисов и платформ",
+  "description": "Разрабатываем корпоративные платформы, веб-сервисы и B2B-порталы для промышленности и крупного бизнеса. Начинаем с анализа бизнес-процессов — проектируем архитектуру, разрабатываем, поддерживаем.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Атвинта",
+    "url": "https://atwinta.ru"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Россия"
+  },
+  "serviceType": "Заказная разработка программного обеспечения",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "RUB",
+    "lowPrice": "1500000",
+    "highPrice": "20000000",
+    "offerCount": "3",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "MVP",
+        "description": "Минимально жизнеспособный продукт с ключевым функционалом",
+        "price": "1500000",
+        "priceCurrency": "RUB"
+      },
+      {
+        "@type": "Offer",
+        "name": "Платформа",
+        "description": "Полноценная корпоративная платформа с интеграциями",
+        "price": "4000000",
+        "priceCurrency": "RUB"
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise",
+        "description": "Крупные промышленные системы, индивидуальная оценка",
+        "price": "12000000",
+        "priceCurrency": "RUB"
+      }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Сколько стоит разработка корпоративной платформы?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "От 1,5 млн руб. (MVP) до 10–20 млн руб. (полный цикл). Стоимость зависит от функционала и интеграций. Точная оценка формируется после брифинга — занимает 1–2 рабочих дня."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько времени занимает разработка веб-сервиса?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MVP — 3–4 месяца. Промышленная платформа с интеграциями — 6–12 месяцев. Срок фиксируется в договоре. Первые рабочие функции — через 4–6 недель после старта."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Помогаете с импортозамещением ПО?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Разрабатываем отечественные аналоги, помогаем с регистрацией в реестре российского ПО. Работаем с требованиями 166-ФЗ и ФСТЭК. Есть опыт миграции без остановки производства."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что будет после запуска платформы?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Работаем по SLA: техподдержка, мониторинг, обновления, плановое развитие функционала. Средний срок работы с клиентом — 5 лет."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можете взять на поддержку уже работающую систему?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Проводим технический аудит, принимаем в поддержку, развиваем функционал. Работали с системами на любых стеках."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как проходит предпроектная аналитика?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Интервью с командой, изучение бизнес-процессов, построение CJM, анализ ИТ-ландшафта. Результат — техническое задание и архитектурная концепция. Занимает 2–4 недели."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Работаете с промышленными предприятиями?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, это наш ключевой сегмент. Среди клиентов — УГМК, Северсталь, Газпром, Мечел. Знаем требования к ИТ-системам предприятий и специфику работы с объектами КИИ."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://atwinta.ru"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Услуги",
+      "item": "https://atwinta.ru/services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Разработка веб-сервисов и платформ",
+      "item": "https://atwinta.ru/razrabotka-veb-servisov/"
+    }
+  ]
+}
+</script>
+<style>
+/* ─── TOKENS ────────────────────────────────────────── */
+:root {
+  --yellow:          #F0FF40;
+  --yellow-dim:      rgba(240,255,64,0.12);
+  --yellow-border:   rgba(240,255,64,0.25);
+  --pink:            #FF2159;
+  --pink-dim:        rgba(255,33,89,0.1);
+  --white:           #FFFFFF;
+  --black:           #1A1A1A;
+  --surface:         #F6F6F6;
+  --surface-2:       #EFEFEF;
+  --dark-surface:    #242424;
+  --dark-surface-2:  #2E2E2E;
+  --text-primary:    #1A1A1A;
+  --text-secondary:  #555555;
+  --text-muted:      #999999;
+  --border:          rgba(0,0,0,0.08);
+  --border-dark:     rgba(255,255,255,0.08);
+
+  --font: 'Geologica', sans-serif;
+  --radius-btn: 160px;
+  --radius-card: 2px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t1: 0.15s ease;
+  --t2: 0.3s ease;
+  --t3: 0.6s var(--ease);
+
+  --px: clamp(20px, 5vw, 80px);
+  --section-py: clamp(80px, 10vw, 130px);
+}
+
+/* ─── RESET ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button { font-family: var(--font); cursor: pointer; border: none; background: none; }
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,100px); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+@media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .grid-3 { grid-template-columns: 1fr; } }
+
+/* ─── TYPE ───────────────────────────────────────────── */
+.t-display { font-size: clamp(38px, 5.5vw, 80px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; }
+.t-h1 { font-size: clamp(30px, 3.8vw, 52px); font-weight: 500; line-height: 1.08; letter-spacing: -0.03em; }
+.t-h2 { font-size: clamp(24px, 2.6vw, 38px); font-weight: 500; line-height: 1.12; letter-spacing: -0.025em; }
+.t-h3 { font-size: clamp(18px, 1.6vw, 24px); font-weight: 500; line-height: 1.2; letter-spacing: -0.02em; }
+.t-body { font-size: clamp(15px, 1.1vw, 17px); font-weight: 300; line-height: 1.65; letter-spacing: -0.015em; }
+.t-small { font-size: clamp(13px, 0.85vw, 14px); font-weight: 300; letter-spacing: -0.01em; line-height: 1.5; }
+.t-label { font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ─── SECTION LABEL ─────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.section-label::before {
+  content: '';
+  width: 18px; height: 1.5px;
+  background: var(--pink);
+  flex-shrink: 0;
+}
+.section-label--light { color: rgba(255,255,255,0.3); }
+.section-label--light::before { background: var(--yellow); }
+
+/* ─── BUTTONS ────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--radius-btn);
+  height: 58px;
+  padding: 0 32px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  transition: var(--t2);
+  position: relative;
+  overflow: hidden;
+}
+.btn:active { transform: scale(0.98); }
+.btn-yellow { background: var(--yellow); color: var(--black); }
+.btn-yellow:hover { background: var(--pink); color: #fff; box-shadow: 0 8px 24px rgba(255,33,89,0.3); }
+.btn-pink { background: var(--pink); color: #fff; }
+.btn-pink:hover { background: var(--yellow); color: var(--black); }
+.btn-ghost-light {
+  background: transparent; color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.2);
+}
+.btn-ghost-light:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
+.btn-ghost-dark {
+  background: transparent; color: var(--black);
+  border: 1.5px solid rgba(0,0,0,0.15);
+}
+.btn-ghost-dark:hover { background: var(--black); color: #fff; border-color: var(--black); }
+.btn-sm { height: 44px; padding: 0 22px; font-size: 13px; }
+.btn svg { flex-shrink: 0; transition: transform var(--t1); }
+.btn:hover svg { transform: translateX(3px); }
+
+/* ─── REVEAL ─────────────────────────────────────────── */
+.r {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.72s var(--ease), transform 0.72s var(--ease);
+}
+.r.on { opacity: 1; transform: none; }
+.r.d1 { transition-delay: 0.1s; }
+.r.d2 { transition-delay: 0.2s; }
+.r.d3 { transition-delay: 0.3s; }
+.r.d4 { transition-delay: 0.4s; }
+.r.d5 { transition-delay: 0.5s; }
+
+/* ═══════════════════════════════════════════════════════
+   NAV
+══════════════════════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background var(--t2), backdrop-filter var(--t2), border-color var(--t2);
+  border-bottom: 1px solid transparent;
+}
+.nav.s {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: var(--border);
+}
+.nav__inner {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 68px; gap: 24px;
+}
+.nav__logo {
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+}
+.nav__logo-mark {
+  width: 30px; height: 30px;
+  background: var(--black); border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav__logo-mark span { color: var(--yellow); font-size: 13px; font-weight: 700; }
+.nav__logo-text { font-size: 17px; font-weight: 500; letter-spacing: -0.03em; }
+.nav__links { display: flex; gap: 28px; list-style: none; }
+.nav__links a {
+  font-size: 14px; font-weight: 300;
+  color: var(--text-secondary); letter-spacing: -0.01em;
+  transition: color var(--t1);
+}
+.nav__links a:hover { color: var(--pink); }
+@media (max-width: 960px) { .nav__links { display: none; } }
+
+/* ═══════════════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  background: var(--black);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 68px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Grid texture */
+.hero__grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Radial glows */
+.hero__glow-1 {
+  position: absolute; top: -10%; right: -5%;
+  width: 55vw; height: 55vw; max-width: 700px; max-height: 700px;
+  background: radial-gradient(circle, rgba(255,33,89,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero__glow-2 {
+  position: absolute; bottom: 5%; left: -10%;
+  width: 40vw; height: 40vw; max-width: 500px; max-height: 500px;
+  background: radial-gradient(circle, rgba(240,255,64,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__body {
+  position: relative; z-index: 2;
+  padding-bottom: clamp(48px, 7vh, 80px);
+}
+
+/* Pill tag */
+.hero__tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(240,255,64,0.08);
+  border: 1px solid var(--yellow-border);
+  color: var(--yellow); padding: 5px 14px;
+  border-radius: 100px; font-size: 12px;
+  font-weight: 400; letter-spacing: 0.06em;
+  text-transform: uppercase; margin-bottom: 28px;
+}
+.hero__tag-pulse {
+  width: 6px; height: 6px;
+  background: var(--yellow); border-radius: 50%;
+  animation: pulse 2.2s ease infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:.4; transform:scale(.7); }
+}
+
+/* Main heading with typewriter words */
+.hero__heading {
+  font-size: clamp(38px, 5.5vw, 80px);
+  font-weight: 500;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  max-width: 960px;
+  margin-bottom: 28px;
+}
+.hero__heading-static { display: block; }
+.hero__heading-row {
+  display: flex; flex-wrap: wrap;
+  align-items: baseline; gap: 0.22em;
+}
+.hero__word-wrap {
+  display: inline-block;
+  height: 1.06em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.hero__word-inner {
+  display: flex; flex-direction: column;
+  transition: transform 0.56s var(--ease);
+}
+.hero__word {
+  display: block;
+  white-space: nowrap;
+  color: var(--yellow);
+  line-height: 1.06;
+}
+
+.hero__sub {
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 300; line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.45);
+  max-width: 520px; margin-bottom: 44px;
+}
+.hero__actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+
+/* Scroll hint */
+.hero__scroll {
+  position: absolute; bottom: 32px; right: var(--px);
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.25); font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  z-index: 2;
+}
+.hero__scroll-track {
+  width: 36px; height: 1.5px;
+  background: rgba(255,255,255,0.1); position: relative; overflow: hidden;
+}
+.hero__scroll-track::after {
+  content: ''; position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: var(--yellow);
+  animation: track 2.4s ease infinite;
+}
+@keyframes track { 0% { left:-100%; } 50%,100% { left:100%; } }
+
+/* Clients strip */
+.hero__clients {
+  position: relative; z-index: 2;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex; align-items: center;
+}
+.hero__clients-label {
+  font-size: 11px; font-weight: 300;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  white-space: nowrap; padding: 20px var(--px);
+  flex-shrink: 0;
+}
+.hero__clients-list {
+  display: flex; align-items: center;
+  gap: clamp(20px, 3.5vw, 48px);
+  padding: 20px var(--px);
+  border-left: 1px solid rgba(255,255,255,0.07);
+  flex-wrap: wrap;
+}
+.client-name {
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 500; letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  transition: color var(--t2);
+  cursor: default;
+}
+.client-name:hover { color: rgba(255,255,255,0.75); }
+
+/* ═══════════════════════════════════════════════════════
+   STATS
+══════════════════════════════════════════════════════ */
+.stats { padding: clamp(56px, 7vw, 88px) 0; border-bottom: 1px solid var(--border); }
+.stats__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+}
+@media (max-width: 720px) { .stats__grid { grid-template-columns: repeat(2, 1fr); } }
+
+.stat {
+  padding: clamp(24px,3vw,40px) clamp(20px,2.5vw,34px);
+  border: 1px solid var(--border);
+  transition: background var(--t2), border-color var(--t2);
+  cursor: default;
+}
+.stat:hover { background: var(--surface); border-color: rgba(0,0,0,0.14); }
+.stat__num {
+  font-size: clamp(40px, 4.8vw, 68px);
+  font-weight: 500; letter-spacing: -0.04em; line-height: 1;
+  color: var(--black); margin-bottom: 10px;
+  display: flex; align-items: baseline; gap: 3px;
+}
+.stat__num sup { font-size: 0.42em; font-weight: 400; color: var(--pink); }
+.stat__text { font-size: clamp(12px,0.88vw,14px); font-weight: 300; color: var(--text-muted); line-height: 1.5; max-width: 160px; }
+
+/* ═══════════════════════════════════════════════════════
+   PRICE STRIP
+══════════════════════════════════════════════════════ */
+.price-strip {
+  padding: clamp(32px, 4vw, 48px) 0;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.price-strip__inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+  flex-wrap: wrap;
+}
+.price-strip__left {
+  flex-shrink: 0;
+  min-width: 200px;
+}
+.price-strip__label {
+  display: block;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+.price-strip__value {
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.price-strip__value strong {
+  font-weight: 500;
+  color: var(--yellow);
+}
+.price-strip__note {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.25);
+  line-height: 1.5;
+  max-width: 260px;
+}
+.price-strip__cards {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  .price-strip__cards { display: none; }
+}
+.price-card {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  transition: background var(--t2), border-color var(--t2);
+  cursor: default;
+  min-width: 0;
+}
+.price-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+}
+.price-card--accent {
+  border-color: rgba(240,255,64,0.2);
+  background: rgba(240,255,64,0.04);
+}
+.price-card--accent:hover {
+  background: rgba(240,255,64,0.07);
+  border-color: rgba(240,255,64,0.35);
+}
+.price-card__type {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 8px;
+}
+.price-card--accent .price-card__type { color: rgba(240,255,64,0.6); }
+.price-card__range {
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.price-card--accent .price-card__range { color: var(--yellow); }
+.price-card__time {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ═══════════════════════════════════════════════════════
+   PROBLEM
+══════════════════════════════════════════════════════ */
+.problem {
+  padding: var(--section-py) 0;
+  background: var(--surface);
+}
+.problem__inner { align-items: start; }
+.problem__text { color: var(--text-secondary); margin-bottom: 36px; max-width: 420px; }
+.problem__aside {
+  font-size: clamp(13px,0.95vw,15px); font-weight: 300;
+  color: var(--pink); display: flex; align-items: center;
+  gap: 8px; cursor: default; transition: gap var(--t1);
+}
+.problem__aside:hover { gap: 14px; }
+
+.problem__items { display: flex; flex-direction: column; gap: 2px; }
+.p-item {
+  display: flex; gap: 18px;
+  padding: clamp(18px,2vw,26px) clamp(18px,2.2vw,28px);
+  background: var(--white); border: 1px solid var(--border);
+  transition: border-color var(--t2), transform var(--t2);
+  cursor: default;
+}
+.p-item:hover { border-color: var(--pink); transform: translateX(5px); }
+.p-item__n { font-size: 11px; font-weight: 400; color: var(--pink); letter-spacing: 0.06em; padding-top: 2px; flex-shrink: 0; }
+.p-item__t { font-size: clamp(14px,1.05vw,16px); font-weight: 300; line-height: 1.55; color: var(--black); letter-spacing: -0.01em; }
+
+/* ═══════════════════════════════════════════════════════
+   APPROACH
+══════════════════════════════════════════════════════ */
+.approach {
+  padding: var(--section-py) 0;
+  background: var(--black); overflow: hidden;
+}
+.approach__hdr {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  margin-bottom: clamp(56px, 7vw, 88px); align-items: end;
+}
+@media (max-width: 768px) { .approach__hdr { grid-template-columns: 1fr; } }
+.approach__heading { color: var(--white); }
+.approach__heading em { font-style: normal; color: var(--yellow); }
+.approach__desc { color: rgba(255,255,255,0.4); font-size: clamp(14px,1vw,16px); line-height: 1.65; align-self: end; }
+
+/* Steps with connector line */
+.approach__steps {
+  display: grid; grid-template-columns: repeat(5,1fr); gap: 0;
+  position: relative;
+}
+@media (max-width: 1000px) { .approach__steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .approach__steps { grid-template-columns: 1fr; } }
+
+/* Horizontal connector (desktop only) */
+.approach__steps::before {
+  content: '';
+  position: absolute;
+  top: 38px; left: calc(10% + 14px); right: calc(10% + 14px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.1) 80%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 1000px) { .approach__steps::before { display: none; } }
+
+.step {
+  padding: clamp(26px,2.8vw,38px) clamp(18px,1.8vw,24px);
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  transition: background var(--t2), border-color var(--t2);
+  cursor: default; position: relative; z-index: 1;
+}
+.step:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.13); }
+.step--a { border-color: rgba(240,255,64,0.2); background: rgba(240,255,64,0.03); }
+.step--a:hover { background: rgba(240,255,64,0.06); border-color: rgba(240,255,64,0.35); }
+
+.step__circle {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em; margin-bottom: 36px;
+  background: var(--black);
+}
+.step--a .step__circle {
+  border-color: rgba(240,255,64,0.4);
+  color: var(--yellow); background: rgba(240,255,64,0.08);
+}
+
+.step__badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(240,255,64,0.12); border: 1px solid rgba(240,255,64,0.25);
+  color: var(--yellow); padding: 2px 10px; border-radius: 100px;
+  font-size: 10px; letter-spacing: 0.06em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+
+.step__title { font-size: clamp(14px,1.1vw,17px); font-weight: 500; color: var(--white); line-height: 1.3; letter-spacing: -0.02em; margin-bottom: 10px; }
+.step--a .step__title { color: var(--yellow); }
+.step__desc { font-size: clamp(12px,0.8vw,13px); font-weight: 300; color: rgba(255,255,255,0.35); line-height: 1.6; }
+.step--a .step__desc { color: rgba(240,255,64,0.45); }
+
+/* ═══════════════════════════════════════════════════════
+   SOLUTIONS
+══════════════════════════════════════════════════════ */
+.solutions { padding: var(--section-py) 0; }
+.solutions__hdr { margin-bottom: clamp(40px,5vw,64px); display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
+@media (max-width: 768px) { .solutions__hdr { grid-template-columns: 1fr; } }
+.solutions__sub { color: var(--text-secondary); font-size: clamp(14px,1vw,16px); align-self: end; }
+
+.sol-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+}
+@media (max-width: 860px) { .sol-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .sol-grid { grid-template-columns: 1fr; } }
+
+.sol-card {
+  padding: clamp(26px,3vw,38px);
+  border: 1px solid var(--border); background: var(--white);
+  display: flex; flex-direction: column; gap: 16px;
+  transition: background var(--t2), border-color var(--t2), transform var(--t2);
+  cursor: default; min-height: 240px;
+}
+.sol-card:hover { background: var(--surface); border-color: rgba(0,0,0,0.15); transform: translateY(-3px); }
+.sol-card--dark { background: var(--black); border-color: var(--black); }
+.sol-card--dark:hover { background: var(--dark-surface); border-color: var(--dark-surface-2); }
+
+.sol-card__ico {
+  width: 42px; height: 42px; border-radius: 10px;
+  background: var(--surface); display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.sol-card--dark .sol-card__ico { background: rgba(255,255,255,0.07); }
+
+.sol-card__title { font-size: clamp(15px,1.2vw,19px); font-weight: 500; letter-spacing: -0.025em; color: var(--black); line-height: 1.25; }
+.sol-card--dark .sol-card__title { color: var(--yellow); }
+.sol-card__desc { font-size: clamp(12px,0.88vw,14px); font-weight: 300; color: var(--text-muted); line-height: 1.6; flex: 1; }
+.sol-card--dark .sol-card__desc { color: rgba(255,255,255,0.35); }
+
+.sol-card__arr {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--surface-2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--black); font-size: 13px; align-self: flex-start;
+  transition: background var(--t1), color var(--t1), transform var(--t1);
+}
+.sol-card:hover .sol-card__arr { background: var(--pink); color: #fff; transform: translateX(3px); }
+.sol-card--dark .sol-card__arr { background: rgba(255,255,255,0.07); color: var(--yellow); }
+.sol-card--dark:hover .sol-card__arr { background: var(--yellow); color: var(--black); }
+
+/* ═══════════════════════════════════════════════════════
+   STACK  ← НОВЫЙ БЛОК
+══════════════════════════════════════════════════════ */
+.stack {
+  padding: var(--section-py) 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stack__hdr { margin-bottom: clamp(40px,5vw,64px); }
+.stack__heading { margin-bottom: 12px; }
+.stack__sub { color: var(--text-secondary); max-width: 500px; font-size: clamp(14px,1vw,16px); }
+
+.stack__cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+}
+@media (max-width: 640px) { .stack__cols { grid-template-columns: 1fr; } }
+
+.stack__col {
+  background: var(--white); border: 1px solid var(--border);
+  padding: clamp(28px,3vw,40px);
+}
+.stack__col-title {
+  font-size: 12px; font-weight: 400; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-bottom: 28px; display: flex; align-items: center; gap: 8px;
+}
+.stack__col-title::before {
+  content: ''; width: 14px; height: 1.5px; background: var(--pink); flex-shrink: 0;
+}
+.stack__col--dark { background: var(--black); border-color: var(--black); }
+.stack__col--dark .stack__col-title { color: rgba(255,255,255,0.3); }
+.stack__col--dark .stack__col-title::before { background: var(--yellow); }
+
+.stack__items {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.stack__item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 100px; cursor: default;
+  transition: border-color var(--t1), background var(--t1);
+}
+.stack__item:hover { border-color: var(--pink); background: #fff; }
+.stack__col--dark .stack__item {
+  background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08);
+}
+.stack__col--dark .stack__item:hover {
+  border-color: rgba(240,255,64,0.4); background: rgba(240,255,64,0.05);
+}
+.stack__item-ico {
+  width: 20px; height: 20px; border-radius: 4px;
+  background: var(--surface-2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; flex-shrink: 0;
+}
+.stack__col--dark .stack__item-ico { background: rgba(255,255,255,0.08); }
+.stack__item-name {
+  font-size: 13px; font-weight: 400;
+  color: var(--text-primary); letter-spacing: -0.01em;
+}
+.stack__col--dark .stack__item-name { color: rgba(255,255,255,0.75); }
+
+/* Stack note */
+.stack__note {
+  margin-top: 24px; padding: 16px 20px;
+  background: var(--yellow-dim); border: 1px solid var(--yellow-border);
+  border-radius: 4px;
+  font-size: 13px; font-weight: 300; color: rgba(240,255,64,0.8);
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CASES
+══════════════════════════════════════════════════════ */
+.cases { padding: var(--section-py) 0; }
+.cases__hdr { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: clamp(36px,5vw,56px); flex-wrap: wrap; }
+
+.cases__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+@media (max-width: 680px) { .cases__grid { grid-template-columns: 1fr; } }
+
+.case {
+  background: var(--white); border: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 18px;
+  padding: clamp(26px,3.5vw,44px);
+  transition: transform var(--t2), border-color var(--t2);
+  cursor: default; min-height: 290px;
+}
+.case:hover { transform: translateY(-4px); border-color: rgba(0,0,0,0.18); }
+.case--dark { background: var(--black); border-color: var(--black); }
+.case--dark:hover { border-color: var(--dark-surface-2); }
+
+.case__ind { font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pink); }
+.case--dark .case__ind { color: var(--yellow); }
+.case__title { font-size: clamp(17px,1.4vw,22px); font-weight: 500; letter-spacing: -0.025em; line-height: 1.2; color: var(--black); flex: 1; }
+.case--dark .case__title { color: var(--white); }
+
+.case__metric {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  padding: 9px 18px; border-radius: 100px; align-self: flex-start;
+  background: rgba(0,0,0,0.04);
+}
+.case--dark .case__metric { background: rgba(240,255,64,0.07); }
+.case__metric-n { font-size: clamp(20px,1.8vw,26px); font-weight: 500; letter-spacing: -0.04em; color: var(--pink); }
+.case--dark .case__metric-n { color: var(--yellow); }
+.case__metric-t { font-size: 12px; font-weight: 300; color: var(--text-secondary); }
+.case--dark .case__metric-t { color: rgba(255,255,255,0.4); }
+
+.case__foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: auto; padding-top: 18px; border-top: 1px solid var(--border);
+}
+.case--dark .case__foot { border-color: rgba(255,255,255,0.07); }
+.case__task { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.45; max-width: 340px; }
+.case--dark .case__task { color: rgba(255,255,255,0.28); }
+.case__btn {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 13px;
+  transition: all var(--t1);
+}
+.case:hover .case__btn { background: var(--pink); border-color: var(--pink); color: #fff; }
+.case--dark .case__btn { border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.3); }
+.case--dark:hover .case__btn { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+
+/* ═══════════════════════════════════════════════════════
+   WHY
+══════════════════════════════════════════════════════ */
+.why {
+  padding: var(--section-py) 0;
+  background: var(--surface);
+}
+.why__inner { align-items: start; }
+.why__desc { color: var(--text-secondary); margin-bottom: 36px; font-size: clamp(14px,1vw,16px); line-height: 1.65; }
+
+.why__list { display: flex; flex-direction: column; }
+.why-item {
+  display: grid; grid-template-columns: 44px 1fr; gap: 18px;
+  padding: clamp(18px,2vw,26px) 0; border-bottom: 1px solid var(--border);
+  transition: background var(--t1); cursor: default;
+}
+.why-item:first-child { border-top: 1px solid var(--border); }
+.why-item__n { font-size: 11px; font-weight: 400; color: var(--pink); letter-spacing: 0.06em; padding-top: 3px; }
+.why-item__title { font-size: clamp(15px,1.1vw,18px); font-weight: 500; letter-spacing: -0.02em; color: var(--black); margin-bottom: 5px; }
+.why-item__desc { font-size: clamp(12px,0.88vw,14px); font-weight: 300; color: var(--text-muted); line-height: 1.55; }
+
+/* ═══════════════════════════════════════════════════════
+   TEAM
+══════════════════════════════════════════════════════ */
+.team { padding: var(--section-py) 0; }
+.team__hdr { margin-bottom: clamp(36px,5vw,56px); }
+.team__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+@media (max-width: 880px) { .team__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .team__grid { grid-template-columns: 1fr; } }
+
+.team-card {
+  background: var(--white); border: 1px solid var(--border);
+  overflow: hidden; transition: transform var(--t2); cursor: default;
+}
+.team-card:hover { transform: translateY(-4px); }
+.team-card__img {
+  aspect-ratio: 3/4; background: var(--surface-2);
+  position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: 14px;
+}
+.team-card__bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(145deg, #e4e4e4 0%, #ccc 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.team-card__init { font-size: 56px; font-weight: 500; color: rgba(0,0,0,0.1); letter-spacing: -0.05em; user-select: none; }
+.team-card__badge {
+  position: relative; z-index: 1;
+  background: var(--yellow); color: var(--black);
+  font-size: 10px; font-weight: 500; letter-spacing: 0.05em;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 100px;
+}
+.team-card__info { padding: clamp(14px,1.8vw,22px); }
+.team-card__name { font-size: clamp(14px,1.1vw,17px); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 3px; }
+.team-card__role { font-size: 12px; font-weight: 300; color: var(--pink); letter-spacing: -0.01em; margin-bottom: 8px; }
+.team-card__exp { font-size: 11px; font-weight: 300; color: var(--text-muted); line-height: 1.5; }
+
+/* ═══════════════════════════════════════════════════════
+   FAQ
+══════════════════════════════════════════════════════ */
+.faq {
+  padding: var(--section-py) 0;
+  background: var(--surface);
+}
+.faq__inner { align-items: start; }
+.faq__sub { color: var(--text-secondary); font-size: clamp(14px,1vw,16px); line-height: 1.6; margin-bottom: 32px; }
+
+.faq__list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-item__btn {
+  width: 100%; display: flex; align-items: center;
+  justify-content: space-between; gap: 20px;
+  padding: clamp(16px,2vw,24px) 0;
+  cursor: pointer; text-align: left;
+}
+.faq-item__q {
+  font-size: clamp(14px,1.05vw,17px); font-weight: 400;
+  color: var(--black); letter-spacing: -0.02em; line-height: 1.35;
+  transition: color var(--t1);
+}
+.faq-item.open .faq-item__q { color: var(--pink); }
+.faq-item__ico {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--text-muted); font-size: 16px; font-weight: 300;
+  transition: all var(--t2);
+}
+.faq-item.open .faq-item__ico { background: var(--pink); border-color: var(--pink); color: #fff; transform: rotate(45deg); }
+.faq-item__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease); }
+.faq-item.open .faq-item__body { grid-template-rows: 1fr; }
+.faq-item__inner { overflow: hidden; }
+.faq-item__a {
+  font-size: clamp(13px,0.95vw,15px); font-weight: 300;
+  color: var(--text-secondary); line-height: 1.65; letter-spacing: -0.01em;
+  padding-bottom: clamp(14px,1.8vw,22px); max-width: 600px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CTA
+══════════════════════════════════════════════════════ */
+.cta {
+  padding: var(--section-py) 0;
+  background: var(--black); overflow: hidden; position: relative;
+}
+.cta__grid-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.cta__glow {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60vw; height: 40vh;
+  background: radial-gradient(ellipse, rgba(255,33,89,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta__inner { position: relative; z-index: 1; align-items: start; }
+.cta__heading { color: var(--white); margin-bottom: 18px; }
+.cta__heading em { font-style: normal; color: var(--yellow); }
+.cta__sub { color: rgba(255,255,255,0.4); font-size: clamp(14px,1vw,16px); line-height: 1.65; margin-bottom: 36px; }
+.cta__proof {
+  padding: 22px; border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+}
+.cta__quote {
+  font-size: clamp(13px,0.9vw,14px); font-weight: 300;
+  color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 16px;
+  font-style: italic;
+}
+.cta__author { display: flex; align-items: center; gap: 12px; }
+.cta__avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 500; color: var(--yellow); flex-shrink: 0;
+}
+.cta__author-name { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.65); }
+.cta__author-role { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.3); }
+
+.cta__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.cta__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: -0.01em;
+  transition: color var(--t1);
+  text-decoration: none;
+}
+.cta__contact-item:hover { color: var(--yellow); }
+.cta__contact-item svg { flex-shrink: 0; color: rgba(255,255,255,0.25); }
+.cta__contact-item--addr { cursor: default; }
+.cta__contact-item--addr:hover { color: rgba(255,255,255,0.5); }
+
+/* FORM */
+.form { display: flex; flex-direction: column; gap: 10px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .form__row { grid-template-columns: 1fr; } }
+.form__field { display: flex; flex-direction: column; gap: 5px; }
+.form__lbl { font-size: 11px; font-weight: 400; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.28); }
+.form__inp, .form__ta {
+  width: 100%;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+  color: var(--white); font-family: var(--font); font-size: 14px; font-weight: 300;
+  padding: 13px 16px; border-radius: 3px; outline: none; resize: none;
+  transition: border-color var(--t1), background var(--t1);
+  letter-spacing: -0.01em;
+}
+.form__inp::placeholder, .form__ta::placeholder { color: rgba(255,255,255,0.18); }
+.form__inp:focus, .form__ta:focus { border-color: rgba(240,255,64,0.35); background: rgba(255,255,255,0.07); }
+.form__ta { min-height: 96px; }
+.form__foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap; margin-top: 4px;
+}
+.form__policy { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.2); line-height: 1.5; max-width: 240px; }
+.form__policy a { color: rgba(255,255,255,0.35); text-decoration: underline; text-underline-offset: 3px; transition: color var(--t1); }
+.form__policy a:hover { color: var(--yellow); }
+.form__alt { display: flex; gap: 14px; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; }
+.form__alt-lbl { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; text-transform: uppercase; }
+.form__contact {
+  font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4);
+  letter-spacing: -0.01em; display: flex; align-items: center; gap: 6px;
+  transition: color var(--t1);
+}
+.form__contact:hover { color: var(--yellow); }
+
+/* ═══════════════════════════════════════════════════════
+   REVIEWS
+══════════════════════════════════════════════════════ */
+.reviews {
+  padding: var(--section-py) 0;
+  background: var(--black);
+}
+.reviews__hdr {
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+.reviews__hdr .section-label--light { color: rgba(255,255,255,0.3); }
+.reviews__hdr .section-label--light::before { background: var(--yellow); }
+.reviews__hdr h2 { color: var(--white); }
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+@media (max-width: 900px) { .reviews__grid { grid-template-columns: 1fr; } }
+
+.review-card {
+  padding: clamp(28px, 3vw, 40px);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: background var(--t2), border-color var(--t2);
+  cursor: default;
+}
+.review-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.14);
+}
+.review-card__stars {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--yellow);
+}
+.review-card__text {
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  flex: 1;
+  font-style: italic;
+}
+.review-card__author {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.review-card__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(240,255,64,0.1);
+  border: 1px solid rgba(240,255,64,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+.review-card__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+.review-card__role {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+.review-card__company {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--yellow);
+  letter-spacing: -0.01em;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════ */
+.footer {
+  background: #111; padding: 36px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer__copy { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.22); }
+.footer__links { display: flex; gap: 20px; list-style: none; }
+.footer__links a { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.28); transition: color var(--t1); }
+.footer__links a:hover { color: var(--yellow); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-mark"><span>А</span></div>
+        <span class="nav__logo-text">Атвинта</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/about">Агентство</a></li>
+        <li><a href="/services">Услуги</a></li>
+        <li><a href="/projects">Проекты</a></li>
+        <li><a href="/blog">Блог</a></li>
+        <li><a href="/contacts">Контакты</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-yellow btn-sm">Обсудить проект</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero__grid"></div>
+  <div class="hero__glow-1"></div>
+  <div class="hero__glow-2"></div>
+
+  <div class="hero__body">
+    <div class="container">
+      <div class="hero__tag r">
+        <span class="hero__tag-pulse"></span>
+        Разработка · Промышленность · B2B
+      </div>
+
+      <h1 class="hero__heading r d1">
+        <span class="hero__heading-static">Разрабатываем</span>
+        <span class="hero__heading-row">
+          <span class="hero__word-wrap" id="word-wrap">
+            <span class="hero__word-inner" id="word-inner">
+              <span class="hero__word">цифровые платформы</span>
+              <span class="hero__word">веб-сервисы</span>
+              <span class="hero__word">B2B-порталы</span>
+              <span class="hero__word">экосистемы</span>
+              <span class="hero__word">цифровые платформы</span>
+            </span>
+          </span>
+          <span style="color:rgba(255,255,255,0.5)">для промышленности</span>
+        </span>
+        <span class="hero__heading-static" style="color:rgba(255,255,255,0.5)">и крупного бизнеса</span>
+      </h1>
+
+      <p class="hero__sub r d2">
+        Начинаем с анализа бизнес-процессов — проектируем архитектуру,
+        разрабатываем, поддерживаем. От первого кода до развития платформы.
+      </p>
+
+      <div class="hero__actions r d3">
+        <a href="#contact" class="btn btn-yellow">
+          Обсудить задачу
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M2.5 7.5h10M9 4l3.5 3.5L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#cases" class="btn btn-ghost-light">Смотреть кейсы</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__clients r d4">
+    <span class="hero__clients-label">Среди клиентов</span>
+    <div class="hero__clients-list">
+      <span class="client-name">УГМК</span>
+      <span class="client-name">Северсталь</span>
+      <span class="client-name">Газпром</span>
+      <span class="client-name">Сбер</span>
+      <span class="client-name">Мечел</span>
+      <span class="client-name">Технониколь</span>
+      <span class="client-name">DNS</span>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <div class="hero__scroll-track"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat r"><div class="stat__num">14<sup>+</sup></div><p class="stat__text">лет работы с промышленными и крупными B2B-компаниями</p></div>
+      <div class="stat r d1"><div class="stat__num">400<sup>+</sup></div><p class="stat__text">реализованных проектов — от веб-сервисов до платформ</p></div>
+      <div class="stat r d2"><div class="stat__num">100<sup>+</sup></div><p class="stat__text">специалистов в штате: аналитики, архитекторы, разработчики</p></div>
+      <div class="stat r d3"><div class="stat__num">5<sup>+</sup></div><p class="stat__text">лет — средний срок сотрудничества с клиентом</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICE STRIP ═══ -->
+<section class="price-strip">
+  <div class="container">
+    <div class="price-strip__inner r">
+      <div class="price-strip__left">
+        <span class="price-strip__label t-label">Стоимость разработки</span>
+        <div class="price-strip__value">от <strong>1,5 млн ₽</strong></div>
+        <p class="price-strip__note">Точная стоимость формируется после брифинга — зависит от функционала, числа интеграций и объёма аналитики</p>
+      </div>
+      <div class="price-strip__cards">
+        <div class="price-card">
+          <div class="price-card__type">MVP</div>
+          <div class="price-card__range">1,5 — 4 млн ₽</div>
+          <div class="price-card__time">3–4 месяца</div>
+        </div>
+        <div class="price-card">
+          <div class="price-card__type">Платформа</div>
+          <div class="price-card__range">4 — 12 млн ₽</div>
+          <div class="price-card__time">6–10 месяцев</div>
+        </div>
+        <div class="price-card price-card--accent">
+          <div class="price-card__type">Enterprise</div>
+          <div class="price-card__range">от 12 млн ₽</div>
+          <div class="price-card__time">индивидуально</div>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-yellow btn-sm" style="flex-shrink:0">Получить оценку →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEM ═══ -->
+<section class="problem">
+  <div class="container">
+    <div class="grid-2 problem__inner">
+      <div class="r">
+        <div class="section-label t-label">С чем приходят к нам</div>
+        <h2 class="t-h2" style="margin-bottom:18px">Промышленные компании сталкиваются с одними и теми же барьерами</h2>
+        <p class="t-body problem__text">За 14 лет работы с предприятиями уровня УГМК, Северсталь и Газпром мы видели одни и те же задачи. И научились их решать.</p>
+        <div class="problem__aside">Атвинта знает, как это решается →</div>
+      </div>
+      <div class="problem__items">
+        <div class="p-item r d1"><span class="p-item__n">01</span><p class="p-item__t">Сотрудники тратят часы на ручные операции, которые можно автоматизировать</p></div>
+        <div class="p-item r d2"><span class="p-item__n">02</span><p class="p-item__t">Устаревшие системы не интегрируются — данные теряются при передаче между отделами</p></div>
+        <div class="p-item r d3"><span class="p-item__n">03</span><p class="p-item__t">Иностранное ПО заблокировано или требует замены по 166-ФЗ</p></div>
+        <div class="p-item r d4"><span class="p-item__n">04</span><p class="p-item__t">Подрядчики не понимают специфику отрасли — делают «как обычно»</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPROACH ═══ -->
+<section class="approach">
+  <div class="container">
+    <div class="approach__hdr">
+      <div class="r">
+        <div class="section-label section-label--light t-label">Как мы работаем</div>
+        <h2 class="t-h2 approach__heading">Начинаем с аналитики —<br><em>не с кода</em></h2>
+      </div>
+      <p class="t-body approach__desc r d1">Большинство агентств сразу пишут код. Мы начинаем с исследования бизнес-процессов — это снижает риск переделок и гарантирует, что система решит реальную задачу.</p>
+    </div>
+    <div class="approach__steps">
+      <div class="step step--a r">
+        <div class="step__circle">01</div>
+        <div class="step__badge">★ Ключевое отличие</div>
+        <div class="step__title">Предпроектная аналитика</div>
+        <div class="step__desc">Интервью с командой, CJM, анализ ИТ-ландшафта. Аналитический центр Атвинты.</div>
+      </div>
+      <div class="step r d1">
+        <div class="step__circle">02</div>
+        <div class="step__title">Архитектурное проектирование</div>
+        <div class="step__desc">Проектируем систему, выбираем стек, согласовываем до первой строки кода.</div>
+      </div>
+      <div class="step r d2">
+        <div class="step__circle">03</div>
+        <div class="step__title">Разработка итерациями</div>
+        <div class="step__desc">Спринты, еженедельные демо, прозрачный статус. Первая версия — раньше срока.</div>
+      </div>
+      <div class="step r d3">
+        <div class="step__circle">04</div>
+        <div class="step__title">Тестирование и запуск</div>
+        <div class="step__desc">Нагрузочное тестирование, пилотный запуск, обучение пользователей.</div>
+      </div>
+      <div class="step r d4">
+        <div class="step__circle">05</div>
+        <div class="step__title">Поддержка и развитие</div>
+        <div class="step__desc">SLA, техподдержка, развитие функционала. Не уходим после сдачи.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTIONS ═══ -->
+<section class="solutions">
+  <div class="container">
+    <div class="solutions__hdr r">
+      <div>
+        <div class="section-label t-label">Что разрабатываем</div>
+        <h2 class="t-h2">Типы решений</h2>
+      </div>
+      <p class="t-body solutions__sub">Проектируем и разрабатываем цифровые продукты под конкретные бизнес-задачи — от MVP до промышленных экосистем.</p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-card r"><div class="sol-card__ico">🏭</div><div class="sol-card__title">Корпоративные платформы</div><div class="sol-card__desc">Единые цифровые экосистемы для управления процессами предприятия. Интеграция с ERP, SAP, 1С.</div><div class="sol-card__arr">→</div></div>
+      <div class="sol-card r d1"><div class="sol-card__ico">🔐</div><div class="sol-card__title">B2B-порталы и личные кабинеты</div><div class="sol-card__desc">Автоматизация работы с дилерами, партнёрами, клиентами. Документооборот, заказы, аналитика.</div><div class="sol-card__arr">→</div></div>
+      <div class="sol-card r d2"><div class="sol-card__ico">⚙️</div><div class="sol-card__title">Веб-сервисы и автоматизация</div><div class="sol-card__desc">Цифровизация производственных и операционных процессов. Снижение ручного труда.</div><div class="sol-card__arr">→</div></div>
+      <div class="sol-card sol-card--dark r d3"><div class="sol-card__ico">🇷🇺</div><div class="sol-card__title">Импортозамещение ПО</div><div class="sol-card__desc">Разработка отечественных аналогов, российский стек, соответствие 166-ФЗ и ФСТЭК.</div><div class="sol-card__arr">→</div></div>
+      <div class="sol-card r d4"><div class="sol-card__ico">🔧</div><div class="sol-card__title">Поддержка и развитие</div><div class="sol-card__desc">Технический аудит, SLA-поддержка, развитие функционала существующих систем.</div><div class="sol-card__arr">→</div></div>
+      <div class="sol-card r d5"><div class="sol-card__ico">📐</div><div class="sol-card__title">Аналитика и проектирование</div><div class="sol-card__desc">Предпроектные исследования, CJM, архитектурное проектирование, техническое задание.</div><div class="sol-card__arr">→</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STACK ═══ (новый блок) -->
+<section class="stack">
+  <div class="container">
+    <div class="stack__hdr r">
+      <div class="section-label t-label">Технологии</div>
+      <h2 class="t-h2 stack__heading">Технологический стек</h2>
+      <p class="t-body stack__sub">Интегрируемся в ваш существующий ИТ-ландшафт — не ломаем, а встраиваемся.</p>
+    </div>
+    <div class="stack__cols">
+      <!-- Integrations -->
+      <div class="stack__col r">
+        <div class="stack__col-title">Интеграции и корпоративные системы</div>
+        <div class="stack__items">
+          <div class="stack__item"><div class="stack__item-ico">🔗</div><span class="stack__item-name">SAP</span></div>
+          <div class="stack__item"><div class="stack__item-ico">1С</div><span class="stack__item-name">1С:ERP / ЗУП</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🗃️</div><span class="stack__item-name">Oracle EBS</span></div>
+          <div class="stack__item"><div class="stack__item-ico">📦</div><span class="stack__item-name">Bitrix24</span></div>
+          <div class="stack__item"><div class="stack__item-ico">📋</div><span class="stack__item-name">amoCRM</span></div>
+          <div class="stack__item"><div class="stack__item-ico">📄</div><span class="stack__item-name">СМЭВ / ЕСИА</span></div>
+          <div class="stack__item"><div class="stack__item-ico">📜</div><span class="stack__item-name">ЭДО / ЮЗДО</span></div>
+          <div class="stack__item"><div class="stack__item-ico">💳</div><span class="stack__item-name">Платёжные системы</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🚚</div><span class="stack__item-name">Транспортные API</span></div>
+        </div>
+      </div>
+      <!-- Russian stack -->
+      <div class="stack__col stack__col--dark r d1">
+        <div class="stack__col-title">Российский стек · Импортозамещение</div>
+        <div class="stack__items">
+          <div class="stack__item"><div class="stack__item-ico">🐘</div><span class="stack__item-name">PostgreSQL</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🐧</div><span class="stack__item-name">Linux / Astra Linux</span></div>
+          <div class="stack__item"><div class="stack__item-ico">☁️</div><span class="stack__item-name">SberCloud / VK Cloud</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🛡️</div><span class="stack__item-name">ФСТЭК-совместимость</span></div>
+          <div class="stack__item"><div class="stack__item-ico">📋</div><span class="stack__item-name">Реестр РФ ПО</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🔒</div><span class="stack__item-name">КриптоПро / ЭЦП</span></div>
+          <div class="stack__item"><div class="stack__item-ico">⚡</div><span class="stack__item-name">NGINX / Kubernetes</span></div>
+          <div class="stack__item"><div class="stack__item-ico">🔧</div><span class="stack__item-name">Laravel / Symfony</span></div>
+        </div>
+        <div class="stack__note">Помогаем с переходом на отечественное ПО и прохождением требований 166-ФЗ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CASES ═══ -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="cases__hdr r">
+      <div>
+        <div class="section-label t-label">Портфолио</div>
+        <h2 class="t-h2">Кейсы</h2>
+      </div>
+      <a href="/projects" class="btn btn-ghost-dark btn-sm">Все проекты →</a>
+    </div>
+    <div class="cases__grid">
+      <div class="case r">
+        <div class="case__ind">Металлургия · B2B-портал</div>
+        <div class="case__title">B2B-портал для работы с дилерской сетью крупной металлургической компании</div>
+        <div class="case__metric"><span class="case__metric-n">+8 900</span><span class="case__metric-t">пользователей в системе</span></div>
+        <div class="case__foot">
+          <p class="case__task">Автоматизация оформления заказов, ЛК дилеров, интеграция с ERP</p>
+          <div class="case__btn">→</div>
+        </div>
+      </div>
+      <div class="case case--dark r d1">
+        <div class="case__ind">Производство · HR-автоматизация</div>
+        <div class="case__title">Автоматизация 46 кадровых сервисов для крупного производственного предприятия</div>
+        <div class="case__metric"><span class="case__metric-n">−30%</span><span class="case__metric-t">время оформления заявки</span></div>
+        <div class="case__foot">
+          <p class="case__task" style="color:rgba(255,255,255,0.28)">Единая HR-платформа, документооборот, интеграция с 1С:ЗУП</p>
+          <div class="case__btn">→</div>
+        </div>
+      </div>
+      <div class="case r d2">
+        <div class="case__ind">Энергетика · Импортозамещение</div>
+        <div class="case__title">Замена иностранной платформы и переход на российский стек</div>
+        <div class="case__metric"><span class="case__metric-n">8 мес</span><span class="case__metric-t">без остановки предприятия</span></div>
+        <div class="case__foot">
+          <p class="case__task">Миграция данных, перепроектирование архитектуры, соответствие 166-ФЗ</p>
+          <div class="case__btn">→</div>
+        </div>
+      </div>
+      <div class="case case--dark r d3">
+        <div class="case__ind">Госсектор · BI-система</div>
+        <div class="case__title">BI-система Аналитического центра при Правительстве РФ</div>
+        <div class="case__metric"><span class="case__metric-n">100%</span><span class="case__metric-t">положительная оценка</span></div>
+        <div class="case__foot">
+          <p class="case__task" style="color:rgba(255,255,255,0.28)">Дашборды для высшего руководства, тёмная тема, realtime-данные</p>
+          <div class="case__btn">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ═══ -->
+<section class="why">
+  <div class="container">
+    <div class="grid-2 why__inner">
+      <div class="r">
+        <div class="section-label t-label">Наши преимущества</div>
+        <h2 class="t-h2" style="margin-bottom:16px">5 причин работать с Атвинтой</h2>
+        <p class="t-body why__desc">Работаем с промышленными компаниями 14 лет. За это время выработали подход, который минимизирует риски и обеспечивает результат.</p>
+        <a href="#contact" class="btn btn-yellow">Обсудить проект</a>
+      </div>
+      <div class="why__list r d1">
+        <div class="why-item"><span class="why-item__n">01</span><div><div class="why-item__title">Аналитический центр внутри</div><p class="why-item__desc">Каждый проект начинается с исследования бизнес-процессов. Снижаем риск переделок.</p></div></div>
+        <div class="why-item"><span class="why-item__n">02</span><div><div class="why-item__title">Опыт в промышленности</div><p class="why-item__desc">Клиенты: УГМК, Северсталь, Газпром. Знаем требования к ИТ-системам и специфику КИИ.</p></div></div>
+        <div class="why-item"><span class="why-item__n">03</span><div><div class="why-item__title">Долгосрочное партнёрство</div><p class="why-item__desc">Средний срок с клиентом — 5 лет. Поддерживаем и развиваем платформы по SLA.</p></div></div>
+        <div class="why-item"><span class="why-item__n">04</span><div><div class="why-item__title">Команда в штате</div><p class="why-item__desc">Аналитики, архитекторы, разработчики, дизайнеры — все свои. Нет аутсорсинга.</p></div></div>
+        <div class="why-item"><span class="why-item__n">05</span><div><div class="why-item__title">14 лет и 400+ проектов</div><p class="why-item__desc">Финансовая устойчивость, зрелые процессы, топ рейтингов Рунета и Tagline.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ОТЗЫВЫ ═══ -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__hdr r">
+      <div class="section-label section-label--light t-label">Что говорят клиенты</div>
+      <h2 class="t-h2" style="color:var(--white)">Отзывы</h2>
+    </div>
+    <div class="reviews__grid">
+      <div class="review-card r">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Работы были выполнены с надлежащим качеством и в установленные сроки. Сотрудники в проактивном порядке предлагали оптимизационные меры. Будем рады рекомендовать Атвинту как компетентную IT-компанию для выполнения масштабных проектов государственного уровня.</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">Г</div>
+          <div>
+            <div class="review-card__name">Госсамова Ч. Ф.</div>
+            <div class="review-card__role">Заместитель руководителя</div>
+            <div class="review-card__company">Аналитический центр при Правительстве РФ</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card r d1">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">По результатам опроса более 80% клиентов отметили, что им нравится сайт компании. Высокая оценка потребителей — самое значимое свидетельство того, что мы не ошиблись при выборе подрядчика.</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">К</div>
+          <div>
+            <div class="review-card__name">Кранзеев В. А.</div>
+            <div class="review-card__role">Директор департамента информационных технологий и технического аудита</div>
+            <div class="review-card__company">ООО «Мечел»</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card r d2">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">Очень радует, что системность Атвинты, на которую я обратил внимание несколько лет назад, не была единичной. Все задачи чётко планируются и успешно выполняются.</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">Д</div>
+          <div>
+            <div class="review-card__name">Анатолий Денисов</div>
+            <div class="review-card__role">Главный редактор</div>
+            <div class="review-card__company">Рейтинг Рунета</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEAM ═══ -->
+<section class="team">
+  <div class="container">
+    <div class="team__hdr r">
+      <div class="section-label t-label">Кто работает над проектом</div>
+      <h2 class="t-h2">Команда</h2>
+    </div>
+    <div class="team__grid">
+      <div class="team-card r">
+        <div class="team-card__img"><div class="team-card__bg"><span class="team-card__init">АЦ</span></div><span class="team-card__badge">Аналитика</span></div>
+        <div class="team-card__info"><div class="team-card__name">Имя Фамилия</div><div class="team-card__role">Руководитель аналитического центра</div><div class="team-card__exp">Лид предпроектных исследований. Промышленные проекты — N лет.</div></div>
+      </div>
+      <div class="team-card r d1">
+        <div class="team-card__img"><div class="team-card__bg"><span class="team-card__init">ТД</span></div></div>
+        <div class="team-card__info"><div class="team-card__name">Имя Фамилия</div><div class="team-card__role">Технический директор</div><div class="team-card__exp">Архитектура highload-систем, интеграции с ERP/SAP/1С.</div></div>
+      </div>
+      <div class="team-card r d2">
+        <div class="team-card__img"><div class="team-card__bg"><span class="team-card__init">РР</span></div></div>
+        <div class="team-card__info"><div class="team-card__name">Имя Фамилия</div><div class="team-card__role">Руководитель разработки</div><div class="team-card__exp">N лет в разработке. Ключевые платформенные проекты.</div></div>
+      </div>
+      <div class="team-card r d3">
+        <div class="team-card__img"><div class="team-card__bg"><span class="team-card__init">ДР</span></div></div>
+        <div class="team-card__info"><div class="team-card__name">Имя Фамилия</div><div class="team-card__role">Директор по развитию</div><div class="team-card__exp">Точка контакта на всём пути проекта.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq">
+  <div class="container">
+    <div class="grid-2 faq__inner">
+      <div class="r">
+        <div class="section-label t-label">Частые вопросы</div>
+        <h2 class="t-h2" style="margin-bottom:14px">FAQ</h2>
+        <p class="t-body faq__sub">Ответы на вопросы, которые задают до начала работы. Не нашли своего — напишите нам.</p>
+        <a href="#contact" class="btn btn-ghost-dark btn-sm">Задать вопрос</a>
+      </div>
+      <div class="faq__list r d1">
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Сколько стоит разработка корпоративной платформы?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">От 1,5 млн руб. (MVP) до 10–20 млн руб. (полный цикл). Стоимость зависит от функционала и интеграций. Точная оценка — после брифинга, занимает 1–2 рабочих дня.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Сколько времени занимает разработка веб-сервиса?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">MVP — 3–4 месяца. Промышленная платформа с интеграциями — 6–12 месяцев. Срок фиксируется в договоре. Первые рабочие функции — через 4–6 недель после старта.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Помогаете с импортозамещением ПО?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">Да. Разрабатываем отечественные аналоги, помогаем с регистрацией в реестре российского ПО. Работаем с требованиями 166-ФЗ и ФСТЭК. Есть опыт миграции без остановки производства.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Что будет после запуска платформы?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">Работаем по SLA: техподдержка, мониторинг, обновления, плановое развитие функционала. Средний срок с клиентом — 5 лет. Не уходим после сдачи.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Возьмёте на поддержку уже работающую систему?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">Да. Проводим технический аудит, принимаем в поддержку, развиваем функционал. Работали с системами на любых стеках.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Как проходит предпроектная аналитика?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">Интервью с командой, изучение процессов, построение CJM, анализ ИТ-ландшафта. Результат — ТЗ и архитектурная концепция. Обычно занимает 2–4 недели.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__btn" onclick="faq(this)"><span class="faq-item__q">Работаете с промышленными предприятиями?</span><span class="faq-item__ico">+</span></button>
+          <div class="faq-item__body"><div class="faq-item__inner"><p class="faq-item__a">Да, это наш ключевой сегмент. Клиенты: УГМК, Северсталь, Газпром, Мечел. Понимаем требования к ИТ-системам предприятий, работали с объектами КИИ.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta" id="contact">
+  <div class="cta__grid-bg"></div>
+  <div class="cta__glow"></div>
+  <div class="container">
+    <div class="grid-2 cta__inner">
+      <div class="r">
+        <div class="section-label section-label--light t-label" style="margin-bottom:20px">Начать работу</div>
+        <h2 class="t-h2 cta__heading">Обсудите задачу —<br>расскажем, как решали<br><em>похожие проекты</em></h2>
+        <p class="t-body cta__sub">Ответим в течение 2 рабочих часов. Первая консультация — бесплатно.</p>
+        <div class="cta__contacts">
+          <a href="tel:+74993501390" class="cta__contact-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12.5 9.5c-.8-.8-1.7-1.3-2.5-1.3-.4 0-.9.2-1.8 1l-.4.4c-.2.2-.4.2-.6 0L4.4 6.8c-.2-.2-.2-.4 0-.6l.4-.4c.8-.9 1-1.4 1-1.8 0-.8-.5-1.7-1.3-2.5C3.7.7 3.1.5 2.5.5c-.5 0-1 .2-1.4.6l-.6.6C-.1 2.3-.1 3.5.7 5c.8 1.4 2 2.9 3.4 4.4 1.4 1.4 2.9 2.5 4.4 3.3 1.5.8 2.7.8 3.4.1l.6-.6c.4-.4.6-.9.6-1.4 0-.6-.3-1.2-.6-1.3z" fill="currentColor"/></svg>
+            +7 (499) 350-13-90 — Москва
+          </a>
+          <a href="tel:+73842452531" class="cta__contact-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12.5 9.5c-.8-.8-1.7-1.3-2.5-1.3-.4 0-.9.2-1.8 1l-.4.4c-.2.2-.4.2-.6 0L4.4 6.8c-.2-.2-.2-.4 0-.6l.4-.4c.8-.9 1-1.4 1-1.8 0-.8-.5-1.7-1.3-2.5C3.7.7 3.1.5 2.5.5c-.5 0-1 .2-1.4.6l-.6.6C-.1 2.3-.1 3.5.7 5c.8 1.4 2 2.9 3.4 4.4 1.4 1.4 2.9 2.5 4.4 3.3 1.5.8 2.7.8 3.4.1l.6-.6c.4-.4.6-.9.6-1.4 0-.6-.3-1.2-.6-1.3z" fill="currentColor"/></svg>
+            +7 (3842) 45-25-31 — Кемерово
+          </a>
+          <a href="mailto:info@atwinta.ru" class="cta__contact-item">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x=".5" y="2.5" width="13" height="9" rx="1.5" stroke="currentColor"/><path d="M1 3l6 5 6-5" stroke="currentColor" stroke-linecap="round"/></svg>
+            info@atwinta.ru
+          </a>
+          <div class="cta__contact-item cta__contact-item--addr">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1a4.5 4.5 0 0 1 4.5 4.5c0 3-4.5 7.5-4.5 7.5S2.5 8.5 2.5 5.5A4.5 4.5 0 0 1 7 1z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="5.5" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+            Москва, Дмитровское ш. 87, оф. 403
+          </div>
+        </div>
+        <div class="cta__proof">
+          <p class="cta__quote">Работы были выполнены с надлежащим качеством и в установленные сроки. Будем рады рекомендовать Атвинту как компетентную IT-компанию для выполнения масштабных проектов государственного уровня.</p>
+          <div class="cta__author">
+            <div class="cta__avatar">Г</div>
+            <div>
+              <div class="cta__author-name">Госсамова Ч. Ф.</div>
+              <div class="cta__author-role">Замруководителя, Аналитический центр при Правительстве РФ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="r d2">
+        <form class="form" onsubmit="submit(event)">
+          <div class="form__row">
+            <div class="form__field"><label class="form__lbl">Имя</label><input class="form__inp" type="text" placeholder="Иван Иванов" required></div>
+            <div class="form__field"><label class="form__lbl">Компания</label><input class="form__inp" type="text" placeholder="ООО «Компания»" required></div>
+          </div>
+          <div class="form__field"><label class="form__lbl">Телефон или Email</label><input class="form__inp" type="text" placeholder="+7 999 000 00 00 или mail@company.ru" required></div>
+          <div class="form__field"><label class="form__lbl">Коротко о задаче</label><textarea class="form__ta" placeholder="Что нужно разработать или улучшить"></textarea></div>
+          <div class="form__foot">
+            <p class="form__policy">Нажимая кнопку, вы соглашаетесь с <a href="/documents">политикой конфиденциальности</a></p>
+            <button type="submit" class="btn btn-yellow">
+              Отправить заявку
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M9 4l3.5 3.5L9 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
+        <div class="form__alt">
+          <span class="form__alt-lbl">или</span>
+          <a href="tel:+74993501390" class="form__contact">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M12.5 9.5c-.8-.8-1.7-1.3-2.5-1.3-.4 0-.9.2-1.8 1l-.4.4c-.2.2-.4.2-.6 0L4.4 6.8c-.2-.2-.2-.4 0-.6l.4-.4c.8-.9 1-1.4 1-1.8 0-.8-.5-1.7-1.3-2.5C3.7.7 3.1.5 2.5.5c-.5 0-1 .2-1.4.6l-.6.6C-.1 2.3-.1 3.5.7 5c.8 1.4 2 2.9 3.4 4.4 1.4 1.4 2.9 2.5 4.4 3.3 1.5.8 2.7.8 3.4.1l.6-.6c.4-.4.6-.9.6-1.4 0-.6-.3-1.2-.6-1.3z" fill="currentColor"/></svg>
+            +7 (499) 350-13-90
+          </a>
+          <a href="mailto:info@atwinta.ru" class="form__contact">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><rect x=".5" y="2.5" width="13" height="9" rx="1.5" stroke="currentColor"/><path d="M1 3l6 5 6-5" stroke="currentColor" stroke-linecap="round"/></svg>
+            info@atwinta.ru
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2025 ООО «Атвинта». Москва · Кемерово</span>
+      <ul class="footer__links">
+        <li><a href="/about">О компании</a></li>
+        <li><a href="/projects">Проекты</a></li>
+        <li><a href="/contacts">Контакты</a></li>
+        <li><a href="/documents">Политика</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 36), {passive:true});
+
+// Reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+
+// Instant reveal for above-fold elements
+document.querySelectorAll('.r').forEach((el, i) => {
+  if (el.getBoundingClientRect().top < innerHeight) {
+    setTimeout(() => el.classList.add('on'), i * 70);
+  }
+});
+
+// Typewriter hero words
+const inner = document.getElementById('word-inner');
+const words = inner ? inner.querySelectorAll('.hero__word') : [];
+if (words.length) {
+  // Set initial wrap width
+  const wrap = document.getElementById('word-wrap');
+  function setWrapWidth() {
+    let maxW = 0;
+    words.forEach(w => {
+      w.style.visibility = 'visible';
+      const ww = w.getBoundingClientRect().width;
+      if (ww > maxW) maxW = ww;
+    });
+    wrap.style.width = maxW + 'px';
+  }
+  setTimeout(setWrapWidth, 100);
+  window.addEventListener('resize', setWrapWidth);
+
+  let cur = 0;
+  const total = words.length - 1; // last is duplicate of first
+  setInterval(() => {
+    cur = (cur + 1) % total;
+    inner.style.transform = `translateY(${-cur * 1.06}em)`;
+  }, 2400);
+}
+
+// FAQ
+function faq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Form
+function submit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('[type=submit]');
+  const orig = btn.innerHTML;
+  btn.innerHTML = 'Отправлено ✓';
+  btn.style.cssText = 'background:var(--pink);color:#fff;pointer-events:none';
+  setTimeout(() => { btn.innerHTML = orig; btn.style.cssText = ''; e.target.reset(); }, 3000);
+}
+</script>
+</body>
+</html>

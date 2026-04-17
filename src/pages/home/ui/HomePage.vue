@@ -1,22 +1,40 @@
 <script setup lang="ts">
-import { UiButton } from '@/shared/ui/button'
+import { useReveal } from '@/shared/lib/useReveal'
+import { NavBar } from '@/widgets/nav-bar'
+import { HeroSection } from '@/widgets/hero-section'
+import { StatsSection } from '@/widgets/stats-section'
+import { PriceStrip } from '@/widgets/price-strip'
+import { ProblemSection } from '@/widgets/problem-section'
+import { ApproachSection } from '@/widgets/approach-section'
+import { SolutionsSection } from '@/widgets/solutions-section'
+import { StackSection } from '@/widgets/stack-section'
+import { CasesSection } from '@/widgets/cases-section'
+import { WhySection } from '@/widgets/why-section'
+import { ReviewsSection } from '@/widgets/reviews-section'
+import { TeamSection } from '@/widgets/team-section'
+import { FaqSection } from '@/widgets/faq-section'
+import { CtaSection } from '@/widgets/cta-section'
+import { AppFooter } from '@/widgets/app-footer'
+
+useReveal()
 </script>
 
 <template>
-  <section class="space-y-6">
-    <div class="space-y-2">
-      <h1 class="text-2xl font-semibold tracking-tight">Vue 3 + FSD starter</h1>
-      <p class="text-sm text-slate-600">
-        Стартовая страница, чтобы проверить роутер, Pinia и shared UI.
-      </p>
-    </div>
-
-    <div class="flex flex-wrap gap-3">
-      <UiButton>Primary</UiButton>
-      <UiButton variant="secondary">Secondary</UiButton>
-      <UiButton variant="ghost">Ghost</UiButton>
-      <UiButton disabled>Disabled</UiButton>
-    </div>
-  </section>
+  <div>
+    <NavBar />
+    <HeroSection />
+    <StatsSection />
+    <PriceStrip />
+    <ProblemSection />
+    <ApproachSection />
+    <SolutionsSection />
+    <StackSection />
+    <CasesSection />
+    <WhySection />
+    <ReviewsSection />
+    <TeamSection />
+    <FaqSection />
+    <CtaSection />
+    <AppFooter />
+  </div>
 </template>
-

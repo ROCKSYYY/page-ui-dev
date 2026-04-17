@@ -1,7 +1,200 @@
 @import 'tailwindcss';
 
-/* app-level defaults */
-:root {
-  color-scheme: light;
+@theme {
+  /* ── Accent colors ── */
+  --color-accent-red: #FF2159;
+  --color-accent-yellow: #F0FF40;
+
+  /* ── Monochrome scale ── */
+  --color-mono-black: #222222;
+  --color-mono-extra-dark-gray: #424242;
+  --color-mono-dark-gray: #787878;
+  --color-mono-gray: #A4A4A4;
+  --color-mono-light-gray: #D9D9D9;
+  --color-mono-extra-light-gray: #F4F4F4;
+  --color-mono-white: #FFFFFF;
+
+  /* ── Typography ── */
+  --font-family-geologica: 'Geologica', sans-serif;
+
+  /* ── Spacing (8px grid) ── */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
 }
 
+:root {
+  color-scheme: light;
+
+  /* ── Semantic surface tokens ── */
+  --surface:    var(--color-mono-extra-light-gray);
+  --surface-2:  var(--color-mono-light-gray);
+  --dark-surface:   #2A2A2A;
+  --dark-surface-2: #333333;
+
+  /* ── Text tokens ── */
+  --text-primary:   var(--color-mono-black);
+  --text-secondary: var(--color-mono-dark-gray);
+  --text-muted:     var(--color-mono-gray);
+
+  /* ── Border tokens ── */
+  --border:      rgba(0, 0, 0, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.08);
+
+  /* ── Semi-transparent accent variants (no opacity shorthand in tokens) ── */
+  --color-accent-yellow-dim:    rgba(240, 255, 64, 0.12);
+  --color-accent-yellow-border: rgba(240, 255, 64, 0.25);
+  --color-accent-red-dim:       rgba(255, 33, 89, 0.1);
+
+  /* ── White/black alpha variants ── */
+  --white-a02:  rgba(255, 255, 255, 0.02);
+  --white-a03:  rgba(255, 255, 255, 0.03);
+  --white-a05:  rgba(255, 255, 255, 0.05);
+  --white-a06:  rgba(255, 255, 255, 0.06);
+  --white-a07:  rgba(255, 255, 255, 0.07);
+  --white-a08:  rgba(255, 255, 255, 0.08);
+  --white-a09:  rgba(255, 255, 255, 0.09);
+  --white-a10:  rgba(255, 255, 255, 0.10);
+  --white-a12:  rgba(255, 255, 255, 0.12);
+  --white-a13:  rgba(255, 255, 255, 0.13);
+  --white-a14:  rgba(255, 255, 255, 0.14);
+  --white-a18:  rgba(255, 255, 255, 0.18);
+  --white-a20:  rgba(255, 255, 255, 0.20);
+  --white-a22:  rgba(255, 255, 255, 0.22);
+  --white-a25:  rgba(255, 255, 255, 0.25);
+  --white-a28:  rgba(255, 255, 255, 0.28);
+  --white-a30:  rgba(255, 255, 255, 0.30);
+  --white-a35:  rgba(255, 255, 255, 0.35);
+  --white-a40:  rgba(255, 255, 255, 0.40);
+  --white-a45:  rgba(255, 255, 255, 0.45);
+  --white-a50:  rgba(255, 255, 255, 0.50);
+  --white-a60:  rgba(255, 255, 255, 0.60);
+  --white-a65:  rgba(255, 255, 255, 0.65);
+  --white-a70:  rgba(255, 255, 255, 0.70);
+  --white-a75:  rgba(255, 255, 255, 0.75);
+  --white-a80:  rgba(255, 255, 255, 0.80);
+  --white-a90:  rgba(255, 255, 255, 0.90);
+
+  --black-a04:  rgba(0, 0, 0, 0.04);
+  --black-a14:  rgba(0, 0, 0, 0.14);
+  --black-a15:  rgba(0, 0, 0, 0.15);
+  --black-a18:  rgba(0, 0, 0, 0.18);
+  --black-a10:  rgba(34, 34, 34, 0.10);
+
+  /* ── Yellow alpha variants ── */
+  --yellow-a03: rgba(240, 255, 64, 0.03);
+  --yellow-a04: rgba(240, 255, 64, 0.04);
+  --yellow-a05: rgba(240, 255, 64, 0.05);
+  --yellow-a06: rgba(240, 255, 64, 0.06);
+  --yellow-a07: rgba(240, 255, 64, 0.07);
+  --yellow-a08: rgba(240, 255, 64, 0.08);
+  --yellow-a10: rgba(240, 255, 64, 0.10);
+  --yellow-a12: rgba(240, 255, 64, 0.12);
+  --yellow-a20: rgba(240, 255, 64, 0.20);
+  --yellow-a35: rgba(240, 255, 64, 0.35);
+  --yellow-a40: rgba(240, 255, 64, 0.40);
+  --yellow-a45: rgba(240, 255, 64, 0.45);
+  --yellow-a60: rgba(240, 255, 64, 0.60);
+  --yellow-a70: rgba(240, 255, 64, 0.70);
+  --yellow-a80: rgba(240, 255, 64, 0.80);
+
+  /* ── Red alpha variants ── */
+  --red-a07:   rgba(255, 33, 89, 0.07);
+  --red-a10:   rgba(255, 33, 89, 0.10);
+  --red-a30:   rgba(255, 33, 89, 0.30);
+
+  /* ── Component tokens ── */
+  --font:         var(--font-family-geologica);
+  --radius-btn:   160px;
+  --card-radius:  3px;
+
+  /* ── Animation ── */
+  --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t1: 0.15s ease;
+  --t2: 0.3s ease;
+  --t3: 0.6s var(--ease);
+
+  /* ── Layout ── */
+  --px:          clamp(20px, 5vw, 80px);
+  --section-py:  clamp(80px, 10vw, 130px);
+  --nav-height:  68px;
+  --grid-bg-size: 56px;
+
+  /* ── Misc ── */
+  --footer-bg:        #111111;
+  --team-avatar-bg:   #e4e4e4;
+  --team-avatar-bg-2: #cccccc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-mono-white);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Reveal animation */
+.r {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.72s var(--ease),
+    transform 0.72s var(--ease);
+}
+
+.r.on {
+  opacity: 1;
+  transform: none;
+}
+
+.r.d1 { transition-delay: 0.1s; }
+.r.d2 { transition-delay: 0.2s; }
+.r.d3 { transition-delay: 0.3s; }
+.r.d4 { transition-delay: 0.4s; }
+.r.d5 { transition-delay: 0.5s; }
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Scroll track animation */
+@keyframes track {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}

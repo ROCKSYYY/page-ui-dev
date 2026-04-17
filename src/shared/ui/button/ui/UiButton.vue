@@ -1,41 +1,101 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type Variant = 'primary' | 'secondary' | 'ghost'
-
 const props = withDefaults(
   defineProps<{
-    variant?: Variant
-    disabled?: boolean
-    type?: 'button' | 'submit' | 'reset'
+    variant?: 'yellow' | 'pink' | 'ghost-light' | 'ghost-dark'
+    size?: 'md' | 'sm'
+    href?: string
+    type?: 'button' | 'submit'
   }>(),
   {
-    variant: 'primary',
-    disabled: false,
+    variant: 'yellow',
+    size: 'md',
     type: 'button',
   },
 )
 
-const classes = computed(() => {
-  const base =
-    'inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition ' +
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400/60 focus-visible:ring-offset-2 ' +
-    'disabled:pointer-events-none disabled:opacity-50'
-
-  switch (props.variant) {
-    case 'secondary':
-      return `${base} bg-slate-100 text-slate-900 hover:bg-slate-200`
-    case 'ghost':
-      return `${base} bg-transparent text-slate-900 hover:bg-slate-100`
-    default:
-      return `${base} bg-slate-900 text-white hover:bg-slate-800`
-  }
-})
+const tag = computed(() => (props.href ? 'a' : 'button'))
 </script>
 
 <template>
-  <button :type="type" :disabled="disabled" :class="classes">
+  <component
+    :is="tag"
+    :href="href"
+    :type="href ? undefined : type"
+    class="ui-btn"
+    :class="[`ui-btn--${variant}`, size === 'sm' ? 'ui-btn--sm' : '']"
+  >
     <slot />
-  </button>
+  </component>
 </template>
 
+<style scoped>
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 var(--spacing-xl);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  transition: var(--t2);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.ui-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.ui-btn:active {
+  transform: scale(0.98);
+}
+
+.ui-btn:focus-visible {
+  outline: 2px solid var(--color-accent-yellow);
+  outline-offset: 3px;
+}
+
+.ui-btn--sm {
+  height: 34px;
+  padding: 0 var(--spacing-lg);
+  font-size: 13px;
+}
+
+.ui-btn--yellow {
+  background: var(--color-accent-yellow);
+  color: var(--color-mono-black);
+}
+
+.ui-btn--pink {
+  background: var(--color-accent-red);
+  color: var(--color-mono-white);
+}
+
+.ui-btn--ghost-light {
+  background: transparent;
+  color: var(--color-mono-white);
+  border: 1.5px solid var(--white-a20);
+}
+
+.ui-btn--ghost-dark {
+  background: transparent;
+  color: var(--color-mono-black);
+  border: 1.5px solid var(--black-a15);
+}
+
+.ui-btn--ghost-dark:hover {
+  background: var(--color-mono-black);
+  color: var(--color-mono-white);
+  border-color: var(--color-mono-black);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+</style>

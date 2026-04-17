@@ -1,16 +1,25 @@
-# repo
+# /repo
+## Git Workflow
+- **Main:** `main` (protected, no direct commits)
+- **Branches:** `feature/<name>`, `fix/<issue>`, `release/<version>`
+- **Strategy:** Squash merge, linear history
 
-## Goal
-Quickly understand the repository: stack, architecture, and important conventions.
+## Commits (Conventional)
+Format: `<type>(<scope>): <description>`
+- Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+- Examples:
+  ✅ `feat(ui): add responsive header with Vibecoding tokens`
+  ✅ `fix(auth): resolve login redirect loop`
+  ❌ `fixed stuff`, `update code`
 
-## What to look at first
-- `CLAUDE.md` for architecture rules (FSD boundaries)
-- `references/` for design inputs
-- `package.json` scripts + tooling
-- `src/app/` for initialization (router, store, global styles)
+## Pre-PR Checklist
+1. `npm run test` → all pass, ≥80% coverage for features/widgets
+2. `npm run lint` → 0 errors, Prettier applied
+3. `npm run build` → 0 TS errors, dist generated
+4. `/check-design` → 0 hardcoded values, tokens compliant
+5. Update `CHANGELOG.md` if `feat`/`fix`
 
-## Working conventions
-- Prefer small, focused commits (if committing is requested).
-- Keep changes within the correct FSD slice.
-- Run `npm run typecheck` and `npm run test:run` after meaningful changes.
-
+## PR Rules
+- Title: Conventional format
+- Description: What changed / Why / Testing done / Screenshots (UI) / Linked issue
+- Requirements: ≥1 approval, CI green, no conflicts

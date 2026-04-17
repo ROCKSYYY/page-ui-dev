@@ -1,45 +1,39 @@
-# Claude Code — Project Guide
+# 🏗 Architecture: FSD (Feature-Sliced Design)
+- **Strict layering:** `app → pages → widgets → features → entities → shared`
+- **NO cross-layer imports:** Lower layers CANNOT import from higher layers
+- **Shared is dumb:** UI components, utils, API clients, types ONLY. No business logic.
+- **Features:** User-facing interactions (forms, auth, search, filters)
+- **Entities:** Business objects with models/types (User, Product, Order)
+- **Widgets:** Complex blocks combining features (Header, Sidebar, ProductCard)
+- **Pages:** Route-level components that compose widgets
 
-This repository is a Vue 3 + TypeScript project structured with **Feature-Sliced Design (FSD)**.
+# 🎨 Design System: Vibecoding Kit
+- **Tokens:** `references/design-tokens.json`
+- **Guidelines:** `references/ui-kit.md`
+- **Strict Rules:**
+  - ONLY use CSS variables from tokens (`var(--color-accent-red)`, `var(--spacing-md)`)
+  - NEVER hardcode `#hex`, `px`, or arbitrary Tailwind values (`w-[317px]`)
+  - Follow 8px grid system strictly
+  - Respect breakpoints: mobile (320-719px), tablet (720-1279px), desktop (1280-1679px), desktop-lg (1680px+)
+- **Workflow:** Run `/load-ui` before UI tasks. Run `/ui` to verify rules.
 
-## Architecture (STRICT)
+# 🛠 Vue 3 + TypeScript Conventions
+- **API Style:** Composition API with `<script setup lang="ts">` ONLY
+- **Typing:** Strict mode, no `any`, explicit prop/emits types
+- **Props:** `defineProps<{ modelValue: string }>()` + `withDefaults()` for optionals
+- **Emits:** `defineEmits<{ (e: 'update:modelValue', v: string): void }>()`
+- **Composables:** `useSomething()` prefix, camelCase, return reactive refs
+- **Styling:** Tailwind utility classes in templates. NO scoped CSS unless truly required.
 
-Slices:
-- `app/`: app initialization (router, store setup, providers, global styles)
-- `pages/`: route-level pages
-- `widgets/`: large UI blocks composing pages
-- `features/`: user scenarios (auth, search, filters)
-- `entities/`: business entities (User, Product, Order)
-- `shared/`: reusable infrastructure (ui, lib, api, config, types)
+# 🚫 Anti-Patterns (NEVER DO)
+- Options API (`data()`, `methods: {}`)
+- Runtime props (`defineProps(['title'])`)
+- Missing emits typing or `@ts-ignore` without comment
+- Hardcoded colors/spacings or inline styles
+- Wrapper `<div>` soup without semantic meaning
+- Importing from higher FSD layers
 
-Rules of dependency direction:
-- `shared` → used by anyone
-- `entities` → may use `shared`
-- `features` → may use `entities` and `shared`
-- `widgets` → may use `features`, `entities`, `shared`
-- `pages` → may use `widgets`, `features`, `entities`, `shared`
-- `app` → wires everything together; avoid putting domain logic here
-
-## Commands
-
-- Install: `npm i`
-- Dev: `npm run dev`
-- Typecheck: `npm run typecheck`
-- Test: `npm run test:run`
-- Lint: `npm run lint`
-- Format: `npm run format:fix`
-
-## Design references
-
-Use the files in `references/` as the single source of truth for:
-- design tokens: `references/design-tokens.json`
-- UI kit expectations: `references/ui-kit.md`
-- HTML reference: `references/design-reference.html`
-
-## Output expectations
-
-- Use Vue 3 Composition API with `<script setup lang="ts">`
-- Keep TypeScript in strict mode
-- Keep FSD boundaries (no cross-imports that break direction)
-- Prefer `@/` alias for `src/`
-
+# ✅ Quality & Workflow
+- Tests: Vitest + Vue Test Utils (features/widgets require coverage)
+- Lint/Format: ESLint + Prettier (auto-fix on save)
+- Pre-commit: `/check-design` → `/repo` → `npm run test` → `npm run lint` → `npm run build`

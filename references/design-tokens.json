@@ -1,26 +1,90 @@
 {
   "color": {
-    "bg": "#ffffff",
-    "text": "#0f172a",
-    "muted": "#64748b",
-    "border": "#e2e8f0",
-    "primary": "#0f172a"
+    "accent": {
+      "red": { "value": "#FF2159" },
+      "yellow": { "value": "#F0FF40" }
+    },
+    "light": {
+      "red": { 
+        "value": "#FF2159",
+        "opacity": "50%"
+      },
+      "yellow": { 
+        "value": "#F0FF40",
+        "opacity": "30%"
+      }
+    },
+    "monochrome": {
+      "black": { "value": "#222222" },
+      "extraDarkGray": { "value": "#424242" },
+      "darkGray": { "value": "#787878" },
+      "gray": { "value": "#A4A4A4" },
+      "lightGray": { "value": "#D9D9D9" },
+      "extraLightGray": { "value": "#F4F4F4" },
+      "white": { "value": "#FFFFFF" },
+      "whiteTransparent": {
+        "value": "#FFFFFF",
+        "opacity": "40%"
+      },
+      "blackTransparent": {
+        "value": "#222222",
+        "opacity": "40%"
+      }
+    }
   },
-  "radius": {
-    "sm": 6,
-    "md": 10
+  "breakpoints": {
+    "mobile": {
+      "value": "320px",
+      "maxWidth": "719px",
+      "query": "@media (max-width: 719px)"
+    },
+    "tablet": {
+      "value": "720px",
+      "minWidth": "720px",
+      "maxWidth": "1279px",
+      "query": "@media (min-width: 720px) and (max-width: 1279px)"
+    },
+    "desktopSmall": {
+      "value": "1280px",
+      "minWidth": "1280px",
+      "maxWidth": "1679px",
+      "query": "@media (min-width: 1280px) and (max-width: 1679px)"
+    },
+    "desktopLarge": {
+      "value": "1680px",
+      "minWidth": "1680px",
+      "query": "@media (min-width: 1680px)"
+    },
+    "desktopXLarge": {
+      "value": "1920px",
+      "minWidth": "1920px",
+      "query": "@media (min-width: 1920px)"
+    }
   },
-  "space": {
-    "2": 8,
-    "3": 12,
-    "4": 16,
-    "6": 24,
-    "8": 32
-  },
-  "typography": {
-    "fontFamily": "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-    "h1": { "fontSize": 24, "fontWeight": 600 },
-    "body": { "fontSize": 14, "fontWeight": 400 }
+  "grid": {
+    "columns": {
+      "desktopLarge": { "value": 12 },
+      "desktopSmall": { "value": 12 },
+      "tablet": { "value": 12 },
+      "mobile": { "value": 4 }
+    },
+    "columnGap": {
+      "desktopLarge": { "value": "120px" },
+      "desktopSmall": { "value": "80px" },
+      "tablet": { "value": "40px" },
+      "mobile": { "value": "20px" }
+    },
+    "columnSize": {
+      "desktopLarge": { "value": "flex" },
+      "desktopSmall": { "value": "flex" },
+      "tablet": { "value": "flex" },
+      "mobile": { "value": "flex" }
+    },
+    "margin": {
+      "desktopLarge": { "value": "120px" },
+      "desktopSmall": { "value": "80px" },
+      "tablet": { "value": "40px" },
+      "mobile": { "value": "20px" }
+    }
   }
 }
-
